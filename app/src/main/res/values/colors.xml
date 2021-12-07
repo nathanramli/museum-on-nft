@@ -7,4 +7,10 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- Muses Colors -->
+    <color name="charade">#272936</color>
+    <color name="tuna">#333340</color>
+    <color name="lightning_yellow">#FBC413</color>
+    <color name="silver">#B8B8B8</color>
 </resources>

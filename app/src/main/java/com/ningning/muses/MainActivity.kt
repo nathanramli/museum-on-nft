@@ -1,58 +1,127 @@
 package com.ningning.muses
 
+import android.content.Intent
 import android.os.Bundle
-import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.navigateUp
-import androidx.navigation.ui.setupActionBarWithNavController
-import android.view.Menu
-import android.view.MenuItem
-import com.ningning.muses.databinding.ActivityMainBinding
+import android.view.View
+import android.widget.Button
+import android.widget.ImageView
+import android.widget.LinearLayout
+import androidx.core.content.ContextCompat
+import androidx.recyclerview.widget.RecyclerView
+import androidx.viewpager2.widget.ViewPager2
+import kotlin.math.min
 
 class MainActivity : AppCompatActivity() {
-
-    private lateinit var appBarConfiguration: AppBarConfiguration
-    private lateinit var binding: ActivityMainBinding
+    private lateinit var onboardingItemsAdapter: OnboardingItemAdapter
+    private lateinit var onboardingIndicatorContainer: LinearLayout
+    private lateinit var onboardingViewPager: ViewPager2
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+        setOnboardingItems()
+        setupIndicators()
+        setCurrentIndicator(0)
+        setupButtonListener()
+    }
 
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+    private fun navigateToHome() {
+        startActivity(Intent(applicationContext, HomeActivity::class.java))
+        finish()
+    }
 
-        setSupportActionBar(binding.toolbar)
+    private fun setOnboardingItems() {
+        onboardingItemsAdapter = OnboardingItemAdapter(
+            listOf(
+                OnboardingItem(
+                    image = R.drawable.looking_at_arts_in_museum,
+                    title = "Exploring the museum from your house",
+                    desc = "Stay at home, don't go anywhere. Because you can start exploring by just staying at home"
+                ),
+                OnboardingItem(
+                    image = R.drawable.virtual_reality,
+                    title = "Exploring the museum from your house",
+                    desc = "Stay at home, don't go anywhere. Because you can start exploring by just staying at home"
+                ),
+                OnboardingItem(
+                    image = R.drawable.connected_with_ethereum,
+                    title = "Exploring the museum from your house",
+                    desc = "Stay at home, don't go anywhere. Because you can start exploring by just staying at home"
+                ),
+            )
+        )
 
-        val navController = findNavController(R.id.nav_host_fragment_content_main)
-        appBarConfiguration = AppBarConfiguration(navController.graph)
-        setupActionBarWithNavController(navController, appBarConfiguration)
+        onboardingViewPager = findViewById<ViewPager2>(R.id.onboardingViewPager)
+        onboardingViewPager.adapter = onboardingItemsAdapter
+        onboardingViewPager.registerOnPageChangeCallback(object :
+            ViewPager2.OnPageChangeCallback() {
+            override fun onPageSelected(position: Int) {
+                super.onPageSelected(position)
+                setCurrentIndicator(position)
+            }
+        })
+        (onboardingViewPager.getChildAt(0) as RecyclerView).overScrollMode =
+            RecyclerView.OVER_SCROLL_NEVER
+    }
 
-        binding.fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show()
+    private fun setupIndicators() {
+        onboardingIndicatorContainer = findViewById(R.id.onboardingIndicatorContainer)
+        val indicators = arrayOfNulls<ImageView>(onboardingItemsAdapter.itemCount)
+        val layoutParams: LinearLayout.LayoutParams = LinearLayout.LayoutParams(
+            LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT
+        )
+        layoutParams.setMargins(8, 0, 8, 0)
+        for (i in indicators.indices) {
+            indicators[i] = ImageView(applicationContext)
+            indicators[i]?.let {
+                it.setImageDrawable(
+                    ContextCompat.getDrawable(
+                        applicationContext,
+                        R.drawable.onboarding_indicator
+                    )
+                )
+                it.layoutParams = layoutParams
+                onboardingIndicatorContainer.addView(it)
+            }
         }
     }
 
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        menuInflater.inflate(R.menu.menu_main, menu)
-        return true
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        return when (item.itemId) {
-            R.id.action_settings -> true
-            else -> super.onOptionsItemSelected(item)
+    private fun setCurrentIndicator(position: Int) {
+        val childCount = onboardingIndicatorContainer.childCount
+        for (i in 0 until childCount) {
+            val imageView = onboardingIndicatorContainer.getChildAt(i) as ImageView
+            if (i == position) {
+                imageView.setImageDrawable(
+                    ContextCompat.getDrawable(
+                        applicationContext,
+                        R.drawable.onboarding_indicator_active,
+                    )
+                )
+            } else {
+                imageView.setImageDrawable(
+                    ContextCompat.getDrawable(
+                        applicationContext,
+                        R.drawable.onboarding_indicator,
+                    )
+                )
+            }
         }
     }
 
-    override fun onSupportNavigateUp(): Boolean {
-        val navController = findNavController(R.id.nav_host_fragment_content_main)
-        return navController.navigateUp(appBarConfiguration)
-                || super.onSupportNavigateUp()
+    private fun setupButtonListener() {
+        val nextButton = findViewById<Button>(R.id.nextButton)
+        nextButton.setOnClickListener(View.OnClickListener {
+            if (onboardingViewPager.currentItem + 1 < onboardingItemsAdapter.itemCount) {
+                onboardingViewPager.currentItem += 1
+            } else {
+                navigateToHome()
+            }
+        })
+
+        val skipButton = findViewById<Button>(R.id.skipButton)
+        skipButton.setOnClickListener(View.OnClickListener() {
+            navigateToHome()
+        })
     }
 }
