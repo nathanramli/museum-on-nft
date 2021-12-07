@@ -7,13 +7,25 @@
     android:background="?attr/colorOnPrimary"
     tools:context=".MainActivity">
 
+    <TextView
+        android:id="@+id/onboardingAppName"
+        android:layout_width="match_parent"
+        android:layout_height="150sp"
+        android:backgroundTint="?attr/colorOnPrimary"
+        android:fontFamily="@font/questrial"
+        android:gravity="center"
+        android:text="MUSES"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@id/onboardingViewPager" />
+
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/onboardingViewPager"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginHorizontal="30dp"
         app:layout_constraintBottom_toTopOf="@id/onboardingIndicatorContainer"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@id/onboardingAppName" />
 
     <LinearLayout
         android:id="@+id/onboardingIndicatorContainer"
