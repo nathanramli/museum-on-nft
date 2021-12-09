@@ -10,7 +10,6 @@ import android.widget.LinearLayout
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
-import kotlin.math.min
 
 class MainActivity : AppCompatActivity() {
     private lateinit var onboardingItemsAdapter: OnboardingItemAdapter
@@ -36,18 +35,18 @@ class MainActivity : AppCompatActivity() {
             listOf(
                 OnboardingItem(
                     image = R.drawable.looking_at_arts_in_museum,
-                    title = "Exploring the museum from your house",
-                    desc = "Stay at home, don't go anywhere. Because you can start exploring by just staying at home"
+                    title = getString(R.string.onboarding_page_one_title),
+                    desc = getString(R.string.onboarding_page_one_desc)
                 ),
                 OnboardingItem(
                     image = R.drawable.virtual_reality,
-                    title = "Exploring the museum from your house",
-                    desc = "Stay at home, don't go anywhere. Because you can start exploring by just staying at home"
+                    title = getString(R.string.onboarding_page_two_title),
+                    desc = getString(R.string.onboarding_page_two_desc)
                 ),
                 OnboardingItem(
                     image = R.drawable.connected_with_ethereum,
-                    title = "Exploring the museum from your house",
-                    desc = "Stay at home, don't go anywhere. Because you can start exploring by just staying at home"
+                    title = getString(R.string.onboarding_page_three_title),
+                    desc = getString(R.string.onboarding_page_three_desc)
                 ),
             )
         )

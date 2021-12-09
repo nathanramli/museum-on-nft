@@ -7,6 +7,14 @@
     <string name="next">Next</string>
     <string name="previous">Previous</string>
 
+    <!-- Onboarding Text   -->
+    <string name="onboarding_page_one_title">Exploring the museum just from home</string>
+    <string name="onboarding_page_one_desc">Stay at home, don\'t go anywhere. Because you can start exploring by just staying at home.</string>
+    <string name="onboarding_page_two_title">Take a look for museum objects in 3D model</string>
+    <string name="onboarding_page_two_desc">The museum objects will look exactly like the original one.</string>
+    <string name="onboarding_page_three_title">NFT (Non-Fungible Token) for museum objects decentralization</string>
+    <string name="onboarding_page_three_desc">We use NFT for objects decentralization to make the objects more secure.</string>
+
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 </resources>
