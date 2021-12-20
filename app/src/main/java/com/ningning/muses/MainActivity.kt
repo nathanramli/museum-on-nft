@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun navigateToHome() {
-        startActivity(Intent(applicationContext, HomeActivity::class.java))
+        startActivity(Intent(applicationContext, SignInActivity::class.java))
         finish()
     }
 
