@@ -13,19 +13,19 @@ import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.widget.Toolbar
 
-class SignInActivity : AppCompatActivity() {
+class SignUpActivity : AppCompatActivity() {
     private lateinit var toolbar: Toolbar
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_sign_in)
+        setContentView(R.layout.activity_sign_up)
 
         toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setHomeButtonEnabled(true)
         toolbar?.setNavigationOnClickListener {
-            navigateToOnBoarding()
+            navigateToSignIn()
             finish()
         }
 
@@ -53,26 +53,21 @@ class SignInActivity : AppCompatActivity() {
         startActivity(Intent(applicationContext, HomeActivity::class.java))
         finish()
     }
-
-    private fun navigateToOnBoarding() {
-        startActivity(Intent(applicationContext, MainActivity::class.java))
-        finish()
-    }
-
-    private fun navigateToSignUp() {
-        startActivity(Intent(applicationContext, SignUpActivity::class.java))
+    
+    private fun navigateToSignIn() {
+        startActivity(Intent(applicationContext, SignInActivity::class.java))
         finish()
     }
 
     private fun setupButtonListener() {
-        val signInButton = findViewById<Button>(R.id.signInButton)
+        val signInButton = findViewById<TextView>(R.id.signInNow)
         signInButton.setOnClickListener(View.OnClickListener {
-            navigateToHome()
+            navigateToSignIn()
         })
 
-        val signUpButton = findViewById<TextView>(R.id.registerNow)
+        val signUpButton = findViewById<Button>(R.id.signUpButton)
         signUpButton.setOnClickListener(View.OnClickListener {
-            navigateToSignUp()
+            navigateToHome()
         })
     }
 }
