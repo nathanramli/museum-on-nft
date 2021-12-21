@@ -10,6 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Muses">
         <activity
+            android:name=".SignInWithCryptoActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
             android:name=".SignUpActivity"
             android:exported="false" />
         <activity

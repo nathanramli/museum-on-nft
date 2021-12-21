@@ -12,13 +12,15 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.widget.Toolbar
+import com.google.android.material.textfield.TextInputEditText
 
-class SignInActivity : AppCompatActivity() {
+class SignInWithCryptoActivity : AppCompatActivity() {
+
     private lateinit var toolbar: Toolbar
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_sign_in)
+        setContentView(R.layout.activity_sign_in_with_crypto)
 
         toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
@@ -32,10 +34,11 @@ class SignInActivity : AppCompatActivity() {
         setupButtonListener()
     }
 
+
     override fun dispatchTouchEvent(ev: MotionEvent?): Boolean {
         if (ev?.action === MotionEvent.ACTION_DOWN) {
             val v = currentFocus
-            if (v is EditText) {
+            if (v is TextInputEditText) {
                 val outRect = Rect()
                 v.getGlobalVisibleRect(outRect)
                 if (!outRect.contains(ev.rawX.toInt(), ev.rawY.toInt())) {
@@ -64,8 +67,8 @@ class SignInActivity : AppCompatActivity() {
         finish()
     }
 
-    private fun navigateToSignInWithCrypto() {
-        startActivity(Intent(applicationContext, SignInWithCryptoActivity::class.java))
+    private fun navigateToSignIn() {
+        startActivity(Intent(applicationContext, SignInActivity::class.java))
         finish()
     }
 
@@ -75,14 +78,14 @@ class SignInActivity : AppCompatActivity() {
             navigateToHome()
         })
 
-        val signInWithCrypto = findViewById<Button>(R.id.signInCryptoButton)
-        signInWithCrypto.setOnClickListener(View.OnClickListener {
-            navigateToSignInWithCrypto()
-        })
-
         val signUpButton = findViewById<TextView>(R.id.registerNow)
         signUpButton.setOnClickListener(View.OnClickListener {
             navigateToSignUp()
+        })
+
+        val signInWithEmail = findViewById<Button>(R.id.signInWithEmailButton)
+        signInWithEmail.setOnClickListener(View.OnClickListener {
+            navigateToSignIn()
         })
     }
 }
