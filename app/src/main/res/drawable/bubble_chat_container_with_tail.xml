@@ -8,5 +8,5 @@
         android:right="1dp"
         android:top="1dp" />
 
-    <corners android:radius="20dp" />
+    <corners android:topRightRadius="20dp" android:bottomRightRadius="20dp" android:topLeftRadius="20dp" />
 </shape>

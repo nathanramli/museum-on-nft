@@ -1,13 +1,18 @@
 package com.ningning.muses
 
 import android.content.Context
+import android.content.Intent
 import android.graphics.Rect
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.MenuItem
 import android.view.MotionEvent
+import android.view.View
 import android.view.inputmethod.InputMethodManager
+import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import androidx.appcompat.widget.Toolbar
 
 class SignInActivity : AppCompatActivity() {
@@ -20,6 +25,13 @@ class SignInActivity : AppCompatActivity() {
         toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setHomeButtonEnabled(true)
+        toolbar?.setNavigationOnClickListener {
+            navigateToOnBoarding()
+            finish()
+        }
+
+        setupButtonListener()
     }
 
     override fun dispatchTouchEvent(ev: MotionEvent?): Boolean {
@@ -39,13 +51,25 @@ class SignInActivity : AppCompatActivity() {
         return super.dispatchTouchEvent(ev)
     }
 
-    override fun onContextItemSelected(item: MenuItem): Boolean {
-        when (item.itemId) {
-            R.id.home -> {
-                finish()
-                return true
-            }
-        }
-        return super.onContextItemSelected(item)
+    private fun navigateToHome() {
+        startActivity(Intent(applicationContext, HomeActivity::class.java))
+        finish()
+    }
+
+    private fun navigateToOnBoarding() {
+        startActivity(Intent(applicationContext, MainActivity::class.java))
+        finish()
+    }
+
+    private fun setupButtonListener() {
+        val signInButton = findViewById<Button>(R.id.signInButton)
+        signInButton.setOnClickListener(View.OnClickListener {
+            navigateToHome()
+        })
+
+        val signUpButton = findViewById<TextView>(R.id.registerNow)
+        signUpButton.setOnClickListener(View.OnClickListener {
+            navigateToOnBoarding()
+        })
     }
 }
