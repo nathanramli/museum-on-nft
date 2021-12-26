@@ -64,6 +64,11 @@ class SignInActivity : AppCompatActivity() {
         finish()
     }
 
+    private fun navigateToResetPassword() {
+        startActivity(Intent(applicationContext, ResetPasswordActivity::class.java))
+        finish()
+    }
+
     private fun navigateToSignInWithCrypto() {
         startActivity(Intent(applicationContext, SignInWithCryptoActivity::class.java))
         finish()
@@ -84,5 +89,11 @@ class SignInActivity : AppCompatActivity() {
         signUpButton.setOnClickListener(View.OnClickListener {
             navigateToSignUp()
         })
+
+        val forgotPassword = findViewById<TextView>(R.id.forgotPassword)
+        forgotPassword.setOnClickListener(View.OnClickListener {
+            navigateToResetPassword()
+        })
+
     }
 }
