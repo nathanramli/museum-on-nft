@@ -4,6 +4,7 @@
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/lightning_yellow</item>
         <item name="colorPrimaryVariant">@color/tuna</item>
+        <item name="colorOnSurface">@color/lightning_yellow</item>
         <item name="colorOnPrimary">@color/charade</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>
@@ -12,6 +13,11 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+    </style>
+
+    <style name="OutlineMultiLineField">
+        <item name="colorPrimary">@color/lightning_yellow</item>
+        <item name="colorOnSurface">@color/white</item>
     </style>
 
     <style name="Theme.Muses.NoActionBar">

@@ -17,10 +17,20 @@
         <entry key="..\:/Users/LEE/AndroidStudioProjects/Muses/app/src/main/res/menu/menu_main.xml" value="0.1375" />
         <entry key="..\:/Users/LEE/AndroidStudioProjects/Muses/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.15989583333333332" />
         <entry key="..\:/Users/LEE/AndroidStudioProjects/Muses/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.15989583333333332" />
+        <entry key="app/src/main/res/drawable/bubble_chat_container_with_tail.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/bubble_chat_container_without_tail.xml" value="0.14114583333333333" />
+        <entry key="app/src/main/res/drawable/bubble_chat_without_tail.xml" value="0.14114583333333333" />
+        <entry key="app/src/main/res/drawable/chat_bubble_without_tail.xml" value="0.14114583333333333" />
+        <entry key="app/src/main/res/drawable/virtual_reality.xml" value="0.14114583333333333" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.125" />
+        <entry key="app/src/main/res/layout/activity_sign_in.xml" value="0.21342894436802196" />
+        <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.184375" />
+        <entry key="app/src/main/res/layout/content_main.xml" value="0.125" />
+        <entry key="app/src/main/res/layout/onboarding_item_container.xml" value="0.125" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
