@@ -68,7 +68,7 @@
         android:layout_width="0dp"
         android:layout_height="?attr/actionBarSize"
         android:elevation="20dp"
-        android:background="@color/charade"
+        android:background="@color/charade_light"
         app:itemIconTint="@color/bottom_nav_color"
         app:itemTextColor="@color/bottom_nav_color"
         app:labelVisibilityMode="labeled"
