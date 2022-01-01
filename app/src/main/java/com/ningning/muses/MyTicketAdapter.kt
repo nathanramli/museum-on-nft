@@ -1,10 +1,15 @@
 package com.ningning.muses
 
+import android.content.Intent
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.Button
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.bottomsheet.BottomSheetDialog
+import com.ningning.muses.data.MUSEUMS
 import com.ningning.muses.data.Ticket
 import com.ningning.muses.databinding.TicketItemLayoutBinding
 import com.ningning.muses.utils.DiffUtilCompare
@@ -30,8 +35,8 @@ class MyTicketAdapter : RecyclerView.Adapter<MyTicketAdapter.ViewHolder>() {
         RecyclerView.ViewHolder(binding.root) {
         fun bind(ticket: Ticket, position: Int) {
             with(binding) {
-                museumName.text = ticket.name
-                museumLocation.text = ticket.location
+                museumName.text = ticket.museum.name
+                museumLocation.text = ticket.museum.location
                 ticketExpiration.text = "Valid until " + ticket.expired
 
                 if (!ticket.isValid) {
@@ -48,6 +53,8 @@ class MyTicketAdapter : RecyclerView.Adapter<MyTicketAdapter.ViewHolder>() {
                             R.color.white
                         )
                     )
+
+                    binding.ticketUseButton.setOnClickListener(null)
                 } else {
                     topItemTicket.setBackgroundResource(R.drawable.my_ticket_background_top)
                     ticketUseButton.setBackgroundColor(
@@ -62,7 +69,25 @@ class MyTicketAdapter : RecyclerView.Adapter<MyTicketAdapter.ViewHolder>() {
                             R.color.white
                         )
                     )
+
+                    binding.ticketUseButton.setOnClickListener {
+                        val bottomSheet = BottomSheetDialog(root.context)
+                        val view = LayoutInflater.from(binding.root.context)
+                            .inflate(R.layout.fragment_bottom_sheet_dialog, null)
+                        view.findViewById<Button>(R.id.noButton)?.setOnClickListener {
+                            bottomSheet.dismiss()
+                        }
+                        bottomSheet.setContentView(view)
+                        bottomSheet.show()
+                    }
                 }
+            }
+
+            binding.root.setOnClickListener {
+                val context = binding.root.context
+                val intent = Intent(binding.root.context, TicketDetailActivity::class.java)
+                intent.putExtra("data", ticket)
+                context.startActivity(intent)
             }
 
             if (position == tickets.size - 1) {
