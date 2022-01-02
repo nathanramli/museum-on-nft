@@ -1,8 +1,8 @@
 package com.ningning.muses
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
@@ -50,6 +50,11 @@ class TicketDetailActivity : AppCompatActivity() {
             bottomSheet.setContentView(view)
             view.findViewById<Button>(R.id.noButton)?.setOnClickListener {
                 bottomSheet.dismiss()
+            }
+            view.findViewById<Button>(R.id.yesButton)?.setOnClickListener {
+                val context = view.context
+                bottomSheet.dismiss()
+                context.startActivity(Intent(context, MuseumObjectActivity::class.java))
             }
             bottomSheet.show()
         }

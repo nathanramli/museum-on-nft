@@ -1,7 +1,6 @@
 package com.ningning.muses
 
 import android.content.Intent
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.Button
@@ -9,7 +8,6 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.bottomsheet.BottomSheetDialog
-import com.ningning.muses.data.MUSEUMS
 import com.ningning.muses.data.Ticket
 import com.ningning.muses.databinding.TicketItemLayoutBinding
 import com.ningning.muses.utils.DiffUtilCompare
@@ -77,6 +75,11 @@ class MyTicketAdapter : RecyclerView.Adapter<MyTicketAdapter.ViewHolder>() {
                         view.findViewById<Button>(R.id.noButton)?.setOnClickListener {
                             bottomSheet.dismiss()
                         }
+                        view.findViewById<Button>(R.id.yesButton)?.setOnClickListener {
+                            val context = binding.root.context
+                            bottomSheet.dismiss()
+                            context.startActivity(Intent(context, MuseumObjectActivity::class.java))
+                        }
                         bottomSheet.setContentView(view)
                         bottomSheet.show()
                     }
@@ -85,7 +88,7 @@ class MyTicketAdapter : RecyclerView.Adapter<MyTicketAdapter.ViewHolder>() {
 
             binding.root.setOnClickListener {
                 val context = binding.root.context
-                val intent = Intent(binding.root.context, TicketDetailActivity::class.java)
+                val intent = Intent(context, TicketDetailActivity::class.java)
                 intent.putExtra("data", ticket)
                 context.startActivity(intent)
             }
