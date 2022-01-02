@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="15dp"
+    android:layout_height="140dp">
+
+    <LinearLayout
+        android:id="@+id/topItemTicket"
+        android:layout_width="match_parent"
+        android:layout_weight="3"
+        android:background="@drawable/my_ticket_background_top"
+        android:gravity="start|center_vertical"
+        android:padding="12dp"
+        android:orientation="vertical"
+        android:layout_height="0dp">
+        <TextView
+            android:id="@+id/museumName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Van Gogh Museum"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="18sp"/>
+        <TextView
+            android:id="@+id/museumLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Amsterdam, Netherlands"
+            android:textColor="@color/white"
+            android:textSize="14sp"/>
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/bottomItemTicket"
+        android:layout_width="match_parent"
+        android:background="@drawable/my_ticket_background_bottom"
+        android:layout_weight="2"
+        android:gravity="center_vertical|start"
+        android:padding="12dp"
+        android:layout_height="0dp">
+        <TextView
+            android:id="@+id/ticketExpiration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:textSize="13sp"
+            android:text="Valid Until 20 January 2022"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/ticketUseButton"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:layout_alignParentEnd="true"
+            android:text="Use"/>
+    </RelativeLayout>
+
+</LinearLayout>

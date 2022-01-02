@@ -15,6 +15,16 @@
     <string name="onboarding_page_three_title">NFT (Non-Fungible Token) for museum objects decentralization</string>
     <string name="onboarding_page_three_desc">We use NFT for objects decentralization to make the objects more secure.</string>
 
+    <!-- Ticket Detail   -->
+    <string name="ticket_detail_image_description">This is museum picture</string>
+    <string name="ticket_detail_museum_name_field">Name</string>
+    <string name="ticket_detail_museum_type_field">Type</string>
+    <string name="ticket_detail_museum_location_field">Location</string>
+    <string name="ticket_detail_museum_established_field">Established</string>
+    <string name="ticket_detail_ticket_expiration_field">Ticket Expiration Date</string>
+    <string name="ticket_detail_ticket_status_field">Ticket Status</string>
+    <string name="ticket_detail_button_use_ticket">Use Ticket</string>
+
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 </resources>
