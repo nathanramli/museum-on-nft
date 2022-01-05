@@ -11,12 +11,15 @@ import android.widget.ImageButton
 import android.widget.TextView
 import androidx.appcompat.widget.Toolbar
 import com.google.android.material.bottomsheet.BottomSheetDialog
+import com.google.android.material.button.MaterialButton
 import com.google.android.material.card.MaterialCardView
 import com.ningning.muses.data.MUSEUM_OBJECTS
 
 class MuseumObjectActivity : AppCompatActivity() {
     private lateinit var toolbar: Toolbar
     private lateinit var webView: WebView
+
+    private var currentObject: Int = 0
 
     @SuppressLint("SetJavaScriptEnabled")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,24 +34,24 @@ class MuseumObjectActivity : AppCompatActivity() {
             finish()
         }
 
-        webView = findViewById<WebView>(R.id.webView)
-        var modelViewer = assets.open("model_viewer.html").bufferedReader().use {
-            it.readText()
-        }
-        modelViewer = modelViewer.replace("thumbnail_placeholder", MUSEUM_OBJECTS[0].thumbnail)
-        modelViewer = modelViewer.replace("model_placeholder", MUSEUM_OBJECTS[0].model)
-
-        findViewById<TextView>(R.id.objectName).text = MUSEUM_OBJECTS[0].name
-        findViewById<TextView>(R.id.objectDescription).text = MUSEUM_OBJECTS[0].description
-
-        webView.loadDataWithBaseURL(null, modelViewer, "text/html", "utf-8", null)
-        webView.settings.apply {
-            javaScriptEnabled = true
-            loadWithOverviewMode = true
-        }
+        webView = findViewById(R.id.webView)
+        updateObject()
 
         findViewById<ImageButton>(R.id.fullscreenButton).setOnClickListener { fullscreenClickEvent() }
         findViewById<ImageButton>(R.id.helpButton).setOnClickListener { helpClickEvent() }
+
+        findViewById<ImageButton>(R.id.previousButton).setOnClickListener {
+            if (currentObject == 0) {
+                currentObject = MUSEUM_OBJECTS.count() - 1
+            } else {
+                currentObject -= 1
+            }
+            updateObject()
+        }
+        findViewById<ImageButton>(R.id.nextButton).setOnClickListener {
+            currentObject = (currentObject + 1) % MUSEUM_OBJECTS.count()
+            updateObject()
+        }
     }
 
     private fun fullscreenClickEvent() {
@@ -56,6 +59,28 @@ class MuseumObjectActivity : AppCompatActivity() {
         val museumObjectContainer = findViewById<MaterialCardView>(R.id.museumObjectContainer)
         museumObjectContainer.layoutParams.width = ViewGroup.LayoutParams.MATCH_PARENT
         museumObjectContainer.requestLayout()
+    }
+
+    private fun updateObject() {
+        var modelViewer = assets.open("model_viewer.html").bufferedReader().use {
+            it.readText()
+        }
+        modelViewer =
+            modelViewer.replace("thumbnail_placeholder", MUSEUM_OBJECTS[currentObject].thumbnail)
+        modelViewer = modelViewer.replace("model_placeholder", MUSEUM_OBJECTS[currentObject].model)
+
+        findViewById<TextView>(R.id.objectName).text = MUSEUM_OBJECTS[currentObject].name
+        findViewById<TextView>(R.id.objectDescription).text =
+            MUSEUM_OBJECTS[currentObject].description
+
+        findViewById<MaterialButton>(R.id.likeButton).text =
+            "❤️  " + MUSEUM_OBJECTS[currentObject].likeCount
+
+        webView.loadDataWithBaseURL(null, modelViewer, "text/html", "utf-8", null)
+        webView.settings.apply {
+            javaScriptEnabled = true
+            loadWithOverviewMode = true
+        }
     }
 
     private fun helpClickEvent() {

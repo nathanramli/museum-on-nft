@@ -43,10 +43,10 @@
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/museumObjectContainer"
         android:layout_width="match_parent"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
         android:layout_height="300dp"
+        android:layout_marginLeft="30dp"
         android:layout_marginTop="20dp"
+        android:layout_marginRight="30dp"
         app:cardCornerRadius="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -60,9 +60,9 @@
                 android:id="@+id/fullscreenButton"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
+                android:layout_gravity="end|bottom"
                 android:layout_marginRight="10dp"
                 android:layout_marginBottom="10dp"
-                android:layout_gravity="end|bottom"
                 android:background="@android:color/transparent"
                 android:elevation="1dp"
                 android:scaleType="fitXY"
@@ -72,9 +72,9 @@
                 android:id="@+id/helpButton"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
+                android:layout_gravity="end|bottom"
                 android:layout_marginRight="45dp"
                 android:layout_marginBottom="10dp"
-                android:layout_gravity="end|bottom"
                 android:background="@android:color/transparent"
                 android:elevation="1dp"
                 android:scaleType="fitXY"
@@ -88,6 +88,51 @@
 
     </com.google.android.material.card.MaterialCardView>
 
+    <RelativeLayout
+        android:id="@+id/actionContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/museumObjectContainer">
+
+        <ImageButton
+            android:id="@+id/previousButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="150dp"
+            android:background="@android:color/transparent"
+            android:elevation="1dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_arrow_back"
+            app:tint="@color/white" />
+
+        <ImageButton
+            android:id="@+id/nextButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="150dp"
+            android:background="@android:color/transparent"
+            android:elevation="1dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_arrow_forward"
+            app:tint="@color/white" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/likeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="40dp"
+            android:letterSpacing="0"
+            android:text="❤️  120"
+            android:textAllCaps="false" />
+    </RelativeLayout>
+
     <TextView
         android:id="@+id/objectDescriptionField"
         android:layout_width="wrap_content"
@@ -98,16 +143,23 @@
         android:textSize="22sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/museumObjectContainer" />
+        app:layout_constraintTop_toBottomOf="@id/actionContainer" />
 
-    <TextView
-        android:id="@+id/objectDescription"
+    <ScrollView
         android:layout_width="330dp"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="20dp"
-        android:text="Object Description"
-        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/objectDescriptionField" />
+        app:layout_constraintTop_toBottomOf="@id/objectDescriptionField">
+
+        <TextView
+            android:id="@+id/objectDescription"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Object Description"
+            android:textSize="17sp" />
+    </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
