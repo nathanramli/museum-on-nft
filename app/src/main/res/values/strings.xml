@@ -31,6 +31,9 @@
     <!-- Main Menu -->
     <string name="search">Search</string>
     <string name="notification">Notification</string>
+    <string name="popular_museum">Popular Museum</string>
+    <string name="recommended_museum">Recommended Museum</string>
+    <string name="see_all">See All</string>
 
     <!-- Bottom Menu -->
     <string name="home">Home</string>

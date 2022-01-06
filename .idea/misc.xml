@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../../../../layout/custom_preview.xml" value="0.20208333333333334" />
         <entry key="..\:/Users/LEE/AndroidStudioProjects/Muses/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.15364583333333334" />
         <entry key="..\:/Users/LEE/AndroidStudioProjects/Muses/app/src/main/res/drawable/app_icon.xml" value="0.240625" />
         <entry key="..\:/Users/LEE/AndroidStudioProjects/Muses/app/src/main/res/drawable/augmented_reality.xml" value="0.290625" />
@@ -20,6 +21,7 @@
         <entry key="app/src/main/res/drawable-anydpi/ic_icon_profile_inactive.xml" value="0.371875" />
         <entry key="app/src/main/res/drawable-anydpi/ic_notification.xml" value="0.371875" />
         <entry key="app/src/main/res/drawable-anydpi/ic_notification_1.xml" value="0.371875" />
+        <entry key="app/src/main/res/drawable/augmented_reality.xml" value="0.36615384615384616" />
         <entry key="app/src/main/res/drawable/bubble_chat_container_with_tail.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/bubble_chat_container_without_tail.xml" value="0.14114583333333333" />
         <entry key="app/src/main/res/drawable/bubble_chat_without_tail.xml" value="0.14114583333333333" />
@@ -34,6 +36,8 @@
         <entry key="app/src/main/res/drawable/ic_icon_profile_inactive.xml" value="0.371875" />
         <entry key="app/src/main/res/drawable/ic_notification.xml" value="0.371875" />
         <entry key="app/src/main/res/drawable/ic_search_black_24dp.xml" value="0.371875" />
+        <entry key="app/src/main/res/drawable/my_ticket_background_bottom.xml" value="0.203125" />
+        <entry key="app/src/main/res/drawable/my_ticket_background_top.xml" value="0.203125" />
         <entry key="app/src/main/res/drawable/notification_button.xml" value="0.371875" />
         <entry key="app/src/main/res/drawable/virtual_reality.xml" value="0.14114583333333333" />
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.35572916666666665" />
@@ -43,7 +47,12 @@
         <entry key="app/src/main/res/layout/activity_sign_in_with_crypto.xml" value="0.2657407407407407" />
         <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.184375" />
         <entry key="app/src/main/res/layout/content_main.xml" value="0.125" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_my_ticket.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/museum_item_layout.xml" value="0.5" />
         <entry key="app/src/main/res/layout/onboarding_item_container.xml" value="0.125" />
+        <entry key="app/src/main/res/layout/ticket_item_layout.xml" value="0.18697916666666667" />
+        <entry key="app/src/main/res/menu/bottom_menu.xml" value="0.35572916666666665" />
         <entry key="app/src/main/res/menu/button_menu.xml" value="0.35572916666666665" />
         <entry key="app/src/main/res/menu/menu_main.xml" value="0.35572916666666665" />
       </map>
