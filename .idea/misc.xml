@@ -42,14 +42,20 @@
         <entry key="app/src/main/res/drawable/virtual_reality.xml" value="0.14114583333333333" />
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.35572916666666665" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_popular_museum.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_recommended_museum.xml" value="0.18" />
         <entry key="app/src/main/res/layout/activity_reset_password.xml" value="0.35572916666666665" />
         <entry key="app/src/main/res/layout/activity_sign_in.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_sign_in_with_crypto.xml" value="0.2657407407407407" />
         <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.184375" />
+        <entry key="app/src/main/res/layout/activity_ticket_detail.xml" value="0.2777777777777778" />
         <entry key="app/src/main/res/layout/content_main.xml" value="0.125" />
-        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_bottom_sheet_dialog.xml" value="0.27685185185185185" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_my_ticket.xml" value="0.33" />
         <entry key="app/src/main/res/layout/museum_item_layout.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/museum_see_all_child_recycler_view.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/museum_see_all_parent_recycler_view.xml" value="0.25" />
         <entry key="app/src/main/res/layout/onboarding_item_container.xml" value="0.125" />
         <entry key="app/src/main/res/layout/ticket_item_layout.xml" value="0.18697916666666667" />
         <entry key="app/src/main/res/menu/bottom_menu.xml" value="0.35572916666666665" />

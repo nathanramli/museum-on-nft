@@ -1,5 +1,6 @@
 package com.ningning.muses
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,6 +9,8 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.ningning.muses.adapter.PopularMuseumAdapter
+import com.ningning.muses.adapter.RecommendedMuseumAdapter
 import com.ningning.muses.databinding.FragmentHomeBinding
 import com.ningning.muses.data.MUSEUMS
 
@@ -36,6 +39,8 @@ class HomeFragment : Fragment() {
         initialRecyclerView()
         popularMuseumAdapter.setData(MUSEUMS)
         recommendedMuseumAdapter.setData(MUSEUMS)
+
+        setupButtonListener()
 
         recyclerViewScrollListener()
     }
@@ -70,5 +75,19 @@ class HomeFragment : Fragment() {
                 super.onScrolled(recyclerView, dx, dy)
             }
         })
+    }
+
+    private fun setupButtonListener() {
+        binding.popularMuseumSeeAll.setOnClickListener {
+            val context = binding.root.context
+            val intent = Intent(binding.root.context, PopularMuseumActivity::class.java)
+            context.startActivity(intent)
+        }
+
+        binding.recommendedMuseumSeeAll.setOnClickListener {
+            val context = binding.root.context
+            val intent = Intent(binding.root.context, RecommendedMuseumActivity::class.java)
+            context.startActivity(intent)
+        }
     }
 }

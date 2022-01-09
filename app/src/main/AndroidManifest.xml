@@ -29,6 +29,12 @@
             android:name=".HomeActivity"
             android:exported="false" />
         <activity
+            android:name=".PopularMuseumActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RecommendedMuseumActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"
