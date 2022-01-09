@@ -1,4 +1,4 @@
-package com.ningning.muses
+package com.ningning.muses.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -8,7 +8,7 @@ import com.ningning.muses.data.Museum
 import com.ningning.muses.databinding.MuseumItemLayoutBinding
 import com.ningning.muses.utils.DiffUtilCompare
 
-class RecommendedMuseumAdapter : RecyclerView.Adapter<RecommendedMuseumAdapter.ViewHolder>() {
+class PopularMuseumAdapter : RecyclerView.Adapter<PopularMuseumAdapter.ViewHolder>() {
     private var museums = emptyList<Museum>()
 
     override fun onCreateViewHolder(
@@ -25,17 +25,18 @@ class RecommendedMuseumAdapter : RecyclerView.Adapter<RecommendedMuseumAdapter.V
 
     inner class ViewHolder(private val binding: MuseumItemLayoutBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun bind(museum: Museum, position: Int) {
-            with(binding) {
-                binding.root.layoutParams.width = 450
-                binding.root.layoutParams.height = 300
-                museumCardName.text = museum.name
-                museumCardName.textSize = 10F
-                museumCardLocation.text = museum.location
-                museumCardLocation.textSize = 7F
-                museumCardPicture.setImageResource(museum.image)
+            fun bind(museum: Museum, position: Int) {
+                with(binding) {
+                    binding.root.layoutParams.width = 750
+                    binding.root.layoutParams.height = 400
+                    museumCardName.text = museum.name
+                    museumCardName.textSize = 20F
+                    museumCardLocation.text = museum.location
+                    museumCardLocation.textSize = 15F
+                    museumCardPicture.setImageResource(museum.image)
+                }
             }
-        }
+
     }
 
     override fun getItemCount(): Int {
