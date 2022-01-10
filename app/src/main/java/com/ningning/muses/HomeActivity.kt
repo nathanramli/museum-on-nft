@@ -1,8 +1,10 @@
 package com.ningning.muses
 
+import android.app.Dialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
+import android.widget.Button
 import com.google.android.material.navigation.NavigationBarView
 import com.ningning.muses.databinding.ActivityHomeBinding
 import androidx.fragment.app.Fragment
@@ -28,6 +30,7 @@ class HomeActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListen
 
         binding.bottomNavigationView.setOnItemSelectedListener(this)
 
+        setupButtonListener()
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
@@ -52,6 +55,25 @@ class HomeActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListen
         supportFragmentManager.beginTransaction().apply {
             replace(R.id.frameContainer, fragment, simpleName)
             commit()
+        }
+    }
+
+    private fun setupButtonListener() {
+        binding.btnAppBarNotification.setOnClickListener {
+            val dialog = Dialog(this)
+            dialog.setContentView(R.layout.fragment_notification)
+            val yesBtn = dialog.findViewById<Button>(R.id.btn_yes)
+            val noBtn = dialog.findViewById<Button>(R.id.btn_no)
+
+            yesBtn.setOnClickListener {
+                binding.btnAppBarNotification.setImageResource(R.drawable.ic_notification_active)
+                dialog.dismiss()
+            }
+            noBtn.setOnClickListener {
+                binding.btnAppBarNotification.setImageResource(R.drawable.ic_notification_inactive)
+                dialog.dismiss()
+            }
+            dialog.show()
         }
     }
 }

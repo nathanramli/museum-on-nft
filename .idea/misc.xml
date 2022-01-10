@@ -21,7 +21,9 @@
         <entry key="app/src/main/res/drawable-anydpi/ic_icon_profile_inactive.xml" value="0.371875" />
         <entry key="app/src/main/res/drawable-anydpi/ic_notification.xml" value="0.371875" />
         <entry key="app/src/main/res/drawable-anydpi/ic_notification_1.xml" value="0.371875" />
+        <entry key="app/src/main/res/drawable-anydpi/ic_notification_inactive.xml" value="0.36615384615384616" />
         <entry key="app/src/main/res/drawable/augmented_reality.xml" value="0.36615384615384616" />
+        <entry key="app/src/main/res/drawable/bg_corner_radius.xml" value="0.36615384615384616" />
         <entry key="app/src/main/res/drawable/bubble_chat_container_with_tail.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/bubble_chat_container_without_tail.xml" value="0.14114583333333333" />
         <entry key="app/src/main/res/drawable/bubble_chat_without_tail.xml" value="0.14114583333333333" />
@@ -53,6 +55,7 @@
         <entry key="app/src/main/res/layout/fragment_bottom_sheet_dialog.xml" value="0.27685185185185185" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_my_ticket.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_notification.xml" value="0.35572916666666665" />
         <entry key="app/src/main/res/layout/museum_item_layout.xml" value="0.5" />
         <entry key="app/src/main/res/layout/museum_see_all_child_recycler_view.xml" value="0.5" />
         <entry key="app/src/main/res/layout/museum_see_all_parent_recycler_view.xml" value="0.25" />
