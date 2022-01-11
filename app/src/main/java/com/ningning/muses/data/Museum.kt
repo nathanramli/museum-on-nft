@@ -11,6 +11,7 @@ data class Museum(
     val type: String,
     val established: String,
     val image: Int,
+    val price: Float,
 ) : Parcelable
 
 val MUSEUMS = listOf<Museum>(
@@ -20,6 +21,7 @@ val MUSEUMS = listOf<Museum>(
         "Art, National",
         "2 June 1973",
         R.drawable.img_van_gogh_museum,
+        10F,
     ),
     Museum(
         "The Metropolitan Museum of Art",
@@ -27,6 +29,7 @@ val MUSEUMS = listOf<Museum>(
         "Art",
         "1870 era",
         R.drawable.img_the_metropolitan_museum_of_art,
+        9.5F,
     ),
     Museum(
         "The British Museum",
@@ -34,6 +37,7 @@ val MUSEUMS = listOf<Museum>(
         "Art, History, Culture, National",
         "1753 era",
         R.drawable.img_the_british_museum,
+        15F,
     ),
     Museum(
         "Vatican Museums",
@@ -41,6 +45,7 @@ val MUSEUMS = listOf<Museum>(
         "History",
         "1506 era",
         R.drawable.img_vatican_museums,
+        13F,
     ),
     Museum(
         "Louvre Museum",
@@ -48,5 +53,6 @@ val MUSEUMS = listOf<Museum>(
         "Art",
         "10 August 1793",
         R.drawable.img_louvre_museum,
+        5.5F,
     ),
 )

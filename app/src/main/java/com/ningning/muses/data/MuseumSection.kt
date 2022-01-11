@@ -20,6 +20,7 @@ val PopularMuseums = listOf<MuseumSection>(
                 "Art, National",
                 "2 June 1973",
                 R.drawable.img_van_gogh_museum,
+                10F,
             ),
             Museum(
                 "The Metropolitan Museum of Art",
@@ -27,6 +28,7 @@ val PopularMuseums = listOf<MuseumSection>(
                 "Art",
                 "1870 era",
                 R.drawable.img_the_metropolitan_museum_of_art,
+                9.5F,
             ),
             Museum(
                 "The British Museum",
@@ -34,6 +36,7 @@ val PopularMuseums = listOf<MuseumSection>(
                 "Art, History, Culture, National",
                 "1753 era",
                 R.drawable.img_the_british_museum,
+                15F,
             ),
             Museum(
                 "Vatican Museums",
@@ -41,6 +44,7 @@ val PopularMuseums = listOf<MuseumSection>(
                 "History",
                 "1506 era",
                 R.drawable.img_vatican_museums,
+                13F,
             ),
         )
     ),
@@ -53,6 +57,7 @@ val PopularMuseums = listOf<MuseumSection>(
                 "Art, National",
                 "2 June 1973",
                 R.drawable.img_van_gogh_museum,
+                10F,
             ),
             Museum(
                 "The Metropolitan Museum of Art",
@@ -60,6 +65,7 @@ val PopularMuseums = listOf<MuseumSection>(
                 "Art",
                 "1870 era",
                 R.drawable.img_the_metropolitan_museum_of_art,
+                9.5F,
             ),
             Museum(
                 "The British Museum",
@@ -67,6 +73,7 @@ val PopularMuseums = listOf<MuseumSection>(
                 "Art, History, Culture, National",
                 "1753 era",
                 R.drawable.img_the_british_museum,
+                15F,
             ),
             Museum(
                 "Vatican Museums",
@@ -74,6 +81,7 @@ val PopularMuseums = listOf<MuseumSection>(
                 "History",
                 "1506 era",
                 R.drawable.img_vatican_museums,
+                13F,
             ),
             Museum(
                 "Louvre Museum",
@@ -81,6 +89,7 @@ val PopularMuseums = listOf<MuseumSection>(
                 "Art",
                 "10 August 1793",
                 R.drawable.img_louvre_museum,
+                5.5F,
             ),
             Museum(
                 "Van Gogh Museum",
@@ -88,6 +97,7 @@ val PopularMuseums = listOf<MuseumSection>(
                 "Art, National",
                 "2 June 1973",
                 R.drawable.img_van_gogh_museum,
+                10F,
             ),
         )
     ),
@@ -100,6 +110,7 @@ val PopularMuseums = listOf<MuseumSection>(
                 "Art, History, Culture, National",
                 "1753 era",
                 R.drawable.img_the_british_museum,
+                15F,
             ),
             Museum(
                 "Vatican Museums",
@@ -107,6 +118,7 @@ val PopularMuseums = listOf<MuseumSection>(
                 "History",
                 "1506 era",
                 R.drawable.img_vatican_museums,
+                13F,
             ),
             Museum(
                 "Louvre Museum",
@@ -114,6 +126,7 @@ val PopularMuseums = listOf<MuseumSection>(
                 "Art",
                 "10 August 1793",
                 R.drawable.img_louvre_museum,
+                5.5F,
             ),
             Museum(
                 "Van Gogh Museum",
@@ -121,6 +134,7 @@ val PopularMuseums = listOf<MuseumSection>(
                 "Art, National",
                 "2 June 1973",
                 R.drawable.img_van_gogh_museum,
+                10F,
             ),
         )
     ),
@@ -133,6 +147,7 @@ val PopularMuseums = listOf<MuseumSection>(
                 "Art, National",
                 "2 June 1973",
                 R.drawable.img_van_gogh_museum,
+                10F,
             ),
             Museum(
                 "The Metropolitan Museum of Art",
@@ -140,6 +155,7 @@ val PopularMuseums = listOf<MuseumSection>(
                 "Art",
                 "1870 era",
                 R.drawable.img_the_metropolitan_museum_of_art,
+                9.5F,
             ),
             Museum(
                 "The British Museum",
@@ -147,6 +163,7 @@ val PopularMuseums = listOf<MuseumSection>(
                 "Art, History, Culture, National",
                 "1753 era",
                 R.drawable.img_the_british_museum,
+                15F,
             ),
             Museum(
                 "Vatican Museums",
@@ -154,6 +171,7 @@ val PopularMuseums = listOf<MuseumSection>(
                 "History",
                 "1506 era",
                 R.drawable.img_vatican_museums,
+                13F,
             ),
         )
     )

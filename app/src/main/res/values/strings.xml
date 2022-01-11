@@ -35,6 +35,13 @@
     <string name="recommended_museum">Recommended Museum</string>
     <string name="see_all">See All</string>
 
+    <!-- Museum Detail -->
+    <string name="museum_detail_button_buy">Buy</string>
+    <string name="museum_detail_ticket_price">Ticket Price</string>
+    <string name="museum_detail_ticket_plus">+</string>
+    <string name="museum_detail_ticket_minus">-</string>
+    <string name="museum_detail_ticket_default">1</string>
+
     <!-- Bottom Menu -->
     <string name="home">Home</string>
     <string name="my_ticket">My Ticket</string>

@@ -13,6 +13,7 @@ import com.ningning.muses.adapter.PopularMuseumAdapter
 import com.ningning.muses.adapter.RecommendedMuseumAdapter
 import com.ningning.muses.databinding.FragmentHomeBinding
 import com.ningning.muses.data.MUSEUMS
+import com.ningning.muses.data.Museum
 
 class HomeFragment : Fragment() {
     private var _binding: FragmentHomeBinding? = null
@@ -87,6 +88,22 @@ class HomeFragment : Fragment() {
         binding.recommendedMuseumSeeAll.setOnClickListener {
             val context = binding.root.context
             val intent = Intent(binding.root.context, RecommendedMuseumActivity::class.java)
+            context.startActivity(intent)
+        }
+
+        binding.include.root.setOnClickListener {
+            val context = binding.root.context
+            val intent = Intent(binding.root.context, MuseumDetailActivity::class.java)
+            intent.putExtra(
+                "data", Museum(
+                    "The Metropolitan Museum of Art",
+                    "New York City, New York",
+                    "Art",
+                    "1870 era",
+                    R.drawable.img_the_metropolitan_museum_of_art,
+                    9.5F,
+                )
+            )
             context.startActivity(intent)
         }
     }

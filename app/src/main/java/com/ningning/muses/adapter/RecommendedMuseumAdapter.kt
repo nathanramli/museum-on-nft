@@ -1,9 +1,11 @@
 package com.ningning.muses.adapter
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
+import com.ningning.muses.MuseumDetailActivity
 import com.ningning.muses.data.Museum
 import com.ningning.muses.databinding.MuseumItemLayoutBinding
 import com.ningning.muses.utils.DiffUtilCompare
@@ -34,6 +36,12 @@ class RecommendedMuseumAdapter : RecyclerView.Adapter<RecommendedMuseumAdapter.V
                 museumCardLocation.text = museum.location
                 museumCardLocation.textSize = 7F
                 museumCardPicture.setImageResource(museum.image)
+            }
+            binding.root.setOnClickListener {
+                val context = binding.root.context
+                val intent = Intent(binding.root.context, MuseumDetailActivity::class.java)
+                intent.putExtra("data", museum)
+                context.startActivity(intent)
             }
         }
     }
