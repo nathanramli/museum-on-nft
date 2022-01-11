@@ -40,7 +40,7 @@
     <string name="museum_detail_ticket_price">Ticket Price</string>
     <string name="museum_detail_ticket_plus">+</string>
     <string name="museum_detail_ticket_minus">-</string>
-    <string name="museum_detail_ticket_default">1</string>
+    <string name="museum_detail_ticket_default">0</string>
 
     <!-- Bottom Menu -->
     <string name="home">Home</string>

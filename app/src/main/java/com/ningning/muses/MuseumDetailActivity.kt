@@ -5,6 +5,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import com.google.android.material.button.MaterialButton
 import com.ningning.muses.data.Museum
 
 class MuseumDetailActivity : AppCompatActivity() {
@@ -30,6 +31,25 @@ class MuseumDetailActivity : AppCompatActivity() {
 
         toolbar.setNavigationOnClickListener {
             finish()
+        }
+
+        val minusButton = findViewById<MaterialButton>(R.id.minus)
+        val plusButton = findViewById<MaterialButton>(R.id.plus)
+        val totalPrice = findViewById<TextView>(R.id.totalPrice)
+        val qty = findViewById<TextView>(R.id.qty)
+
+        minusButton.setOnClickListener {
+            val currentQty = qty.text.toString().toInt()
+            if (currentQty > 0) {
+                qty.text = (currentQty - 1).toString()
+            }
+            totalPrice.text = ((currentQty - 1) * (data?.price!!)).toString().plus(" $")
+        }
+
+        plusButton.setOnClickListener {
+            val currentQty = qty.text.toString().toInt()
+            qty.text = (currentQty + 1).toString()
+            totalPrice.text = ((currentQty + 1) * (data?.price!!)).toString().plus(" $")
         }
     }
 }
