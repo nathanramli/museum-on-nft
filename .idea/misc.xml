@@ -47,6 +47,7 @@
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.35572916666666665" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_museum_detail.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_payment_confirmation.xml" value="0.35572916666666665" />
         <entry key="app/src/main/res/layout/activity_payment_method.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_popular_museum.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_recommended_museum.xml" value="0.18" />

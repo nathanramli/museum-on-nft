@@ -57,7 +57,8 @@ class MuseumDetailActivity : AppCompatActivity() {
         buyButton.setOnClickListener {
             val context = this
             val intent = Intent(this, PaymentMethodActivity::class.java)
-            intent.putExtra("data", intent.getParcelableExtra<Museum>("data"))
+            intent.putExtra("data", data)
+            intent.putExtra("qty", qty.text.toString().toInt())
             context.startActivity(intent)
         }
     }

@@ -47,6 +47,18 @@
     <string name="payment_method_term">I have read all terms and condition</string>
     <string name="payment_method_forms">All forms of crime will be followed up by the parties concerned</string>
 
+    <!-- Payment Confirmation -->
+    <string name="payment_confirmation_confirm">Confirm</string>
+    <string name="payment_confirmation_detail">Here your transaction detail:</string>
+    <string name="payment_confirmation_museum_name_field">Name :  </string>
+    <string name="payment_confirmation_museum_type_field">Type :  </string>
+    <string name="payment_confirmation_museum_location_field">Location :  </string>
+    <string name="payment_confirmation_museum_established_field">Established :  </string>
+    <string name="payment_confirmation_museum_payment_method_field">Payment Method :  </string>
+    <string name="payment_confirmation_museum_ticket_valid_field">Ticket Valid :  </string>
+    <string name="payment_confirmation_museum_ticket_price_field">Ticket Price :  </string>
+    <string name="payment_confirmation_museum_ticket_amount_field">Ticket Amount :  </string>
+
     <!-- Bottom Menu -->
     <string name="home">Home</string>
     <string name="my_ticket">My Ticket</string>
