@@ -1,5 +1,6 @@
 package com.ningning.muses
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
@@ -53,8 +54,9 @@ class PaymentConfirmationActivity : AppCompatActivity() {
                 bottomSheet.dismiss()
             }
             view.findViewById<Button>(R.id.yesConfirmPaymentButton)?.setOnClickListener {
-                //TODO: Payment Success
-                bottomSheet.dismiss()
+                val context = this
+                val intent = Intent(this, PaymentSuccessActivity::class.java)
+                context.startActivity(intent)
             }
             bottomSheet.show()
         }
