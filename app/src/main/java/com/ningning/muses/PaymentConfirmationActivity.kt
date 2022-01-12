@@ -1,10 +1,13 @@
 package com.ningning.muses
 
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import com.google.android.material.bottomsheet.BottomSheetDialog
+import com.google.android.material.button.MaterialButton
 import com.ningning.muses.data.Museum
 
 class PaymentConfirmationActivity : AppCompatActivity() {
@@ -40,5 +43,20 @@ class PaymentConfirmationActivity : AppCompatActivity() {
             finish()
         }
 
+        val confirmButton = findViewById<MaterialButton>(R.id.btnConfirm)
+        confirmButton.setOnClickListener {
+            val bottomSheet = BottomSheetDialog(this)
+            val view =
+                layoutInflater.inflate(R.layout.fragment_bottom_sheet_confirm_payment_dialog, null)
+            bottomSheet.setContentView(view)
+            view.findViewById<Button>(R.id.noConfirmPaymentButton)?.setOnClickListener {
+                bottomSheet.dismiss()
+            }
+            view.findViewById<Button>(R.id.yesConfirmPaymentButton)?.setOnClickListener {
+                //TODO: Payment Success
+                bottomSheet.dismiss()
+            }
+            bottomSheet.show()
+        }
     }
 }
