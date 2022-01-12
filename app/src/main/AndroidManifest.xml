@@ -38,6 +38,9 @@
             android:name=".MuseumDetailActivity"
             android:exported="false" />
         <activity
+            android:name=".PaymentMethodActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"

@@ -42,6 +42,11 @@
     <string name="museum_detail_ticket_minus">-</string>
     <string name="museum_detail_ticket_default">0</string>
 
+    <!-- Payment Method -->
+    <string name="payment_method_choose">Choose one of payment method below:</string>
+    <string name="payment_method_term">I have read all terms and condition</string>
+    <string name="payment_method_forms">All forms of crime will be followed up by the parties concerned</string>
+
     <!-- Bottom Menu -->
     <string name="home">Home</string>
     <string name="my_ticket">My Ticket</string>

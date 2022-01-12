@@ -1,5 +1,6 @@
 package com.ningning.muses
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
@@ -42,14 +43,22 @@ class MuseumDetailActivity : AppCompatActivity() {
             val currentQty = qty.text.toString().toInt()
             if (currentQty > 0) {
                 qty.text = (currentQty - 1).toString()
+                totalPrice.text = ((currentQty - 1) * (data?.price!!)).toString().plus(" $")
             }
-            totalPrice.text = ((currentQty - 1) * (data?.price!!)).toString().plus(" $")
         }
 
         plusButton.setOnClickListener {
             val currentQty = qty.text.toString().toInt()
             qty.text = (currentQty + 1).toString()
             totalPrice.text = ((currentQty + 1) * (data?.price!!)).toString().plus(" $")
+        }
+
+        val buyButton = findViewById<MaterialButton>(R.id.btnBuyTicket)
+        buyButton.setOnClickListener {
+            val context = this
+            val intent = Intent(this, PaymentMethodActivity::class.java)
+            intent.putExtra("data", intent.getParcelableExtra<Museum>("data"))
+            context.startActivity(intent)
         }
     }
 }
