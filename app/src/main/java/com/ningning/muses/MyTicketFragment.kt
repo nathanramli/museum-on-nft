@@ -9,6 +9,7 @@ import androidx.core.content.ContextCompat
 import com.ningning.muses.data.Ticket
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.ningning.muses.adapter.MyTicketAdapter
 import com.ningning.muses.data.MUSEUMS
 import com.ningning.muses.databinding.FragmentMyTicketBinding
 

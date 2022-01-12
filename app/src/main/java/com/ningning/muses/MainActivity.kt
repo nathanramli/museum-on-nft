@@ -10,6 +10,7 @@ import android.widget.LinearLayout
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
+import com.ningning.muses.adapter.OnboardingItemAdapter
 
 class MainActivity : AppCompatActivity() {
     private lateinit var onboardingItemsAdapter: OnboardingItemAdapter

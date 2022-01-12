@@ -31,10 +31,9 @@ class TicketDetailActivity : AppCompatActivity() {
         findViewById<TextView>(R.id.ticketStatus).text =
             if (data?.isValid == true) "Active" else "Expired"
 
-        val identifierImage = resources.getIdentifier(data?.museum?.image, "drawable", packageName)
-        findViewById<ImageView>(R.id.museumPicture).setImageResource(identifierImage)
+        data?.museum?.image?.let { findViewById<ImageView>(R.id.museumPicture).setImageResource(it) }
 
-        toolbar?.setNavigationOnClickListener {
+        toolbar.setNavigationOnClickListener {
             // Navigate to My Ticket
             finish()
         }

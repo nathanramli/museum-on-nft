@@ -1,6 +1,7 @@
-package com.ningning.muses
+package com.ningning.muses.adapter
 
 import android.content.Intent
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.Button
@@ -8,6 +9,8 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.bottomsheet.BottomSheetDialog
+import com.ningning.muses.R
+import com.ningning.muses.TicketDetailActivity
 import com.ningning.muses.data.Ticket
 import com.ningning.muses.databinding.TicketItemLayoutBinding
 import com.ningning.muses.utils.DiffUtilCompare

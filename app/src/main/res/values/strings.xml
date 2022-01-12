@@ -28,6 +28,42 @@
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 
+    <!-- Main Menu -->
+    <string name="search">Search</string>
+    <string name="notification">Notification</string>
+    <string name="popular_museum">Popular Museum</string>
+    <string name="recommended_museum">Recommended Museum</string>
+    <string name="see_all">See All</string>
+
+    <!-- Museum Detail -->
+    <string name="museum_detail_button_buy">Buy</string>
+    <string name="museum_detail_ticket_price">Ticket Price</string>
+    <string name="museum_detail_ticket_plus">+</string>
+    <string name="museum_detail_ticket_minus">-</string>
+    <string name="museum_detail_ticket_default">0</string>
+
+    <!-- Payment Method -->
+    <string name="payment_method_choose">Choose one of payment method below:</string>
+    <string name="payment_method_term">I have read all terms and condition</string>
+    <string name="payment_method_forms">All forms of crime will be followed up by the parties concerned</string>
+
+    <!-- Payment Confirmation -->
+    <string name="payment_confirmation_confirm">Confirm</string>
+    <string name="payment_confirmation_detail">Here your transaction detail:</string>
+    <string name="payment_confirmation_museum_name_field">Name :  </string>
+    <string name="payment_confirmation_museum_type_field">Type :  </string>
+    <string name="payment_confirmation_museum_location_field">Location :  </string>
+    <string name="payment_confirmation_museum_established_field">Established :  </string>
+    <string name="payment_confirmation_museum_payment_method_field">Payment Method :  </string>
+    <string name="payment_confirmation_museum_ticket_valid_field">Ticket Valid :  </string>
+    <string name="payment_confirmation_museum_ticket_price_field">Ticket Price :  </string>
+    <string name="payment_confirmation_museum_ticket_amount_field">Ticket Amount :  </string>
+
+    <!-- Bottom Menu -->
+    <string name="home">Home</string>
+    <string name="my_ticket">My Ticket</string>
+    <string name="profile">Profile</string>
+
     <string name="object_viewer_helper_title">Orbit Around</string>
     <string name="object_viewer_helper_desc">Use one finger to drag for orbit around</string>
 </resources>
