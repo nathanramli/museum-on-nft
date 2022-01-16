@@ -75,6 +75,7 @@
         <entry key="app/src/main/res/layout/content_main.xml" value="0.125" />
         <entry key="app/src/main/res/layout/fragment_bottom_sheet_confirm_payment_dialog.xml" value="0.30648148148148147" />
         <entry key="app/src/main/res/layout/fragment_bottom_sheet_dialog.xml" value="0.27685185185185185" />
+        <entry key="app/src/main/res/layout/fragment_bottom_sheet_logout.xml" value="0.30648148148148147" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.22" />
         <entry key="app/src/main/res/layout/fragment_my_ticket.xml" value="0.18" />
         <entry key="app/src/main/res/layout/fragment_notification.xml" value="0.35572916666666665" />
