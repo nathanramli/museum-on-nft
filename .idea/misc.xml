@@ -29,6 +29,7 @@
         <entry key="app/src/main/res/drawable/bubble_chat_without_tail.xml" value="0.14114583333333333" />
         <entry key="app/src/main/res/drawable/chat_bubble_without_tail.xml" value="0.14114583333333333" />
         <entry key="app/src/main/res/drawable/connected_with_ethereum.xml" value="0.371875" />
+        <entry key="app/src/main/res/drawable/ic_change_password.xml" value="0.371875" />
         <entry key="app/src/main/res/drawable/ic_checklist_2_.xml" value="0.371875" />
         <entry key="app/src/main/res/drawable/ic_checklist_active.xml" value="0.371875" />
         <entry key="app/src/main/res/drawable/ic_checklist_inactive.xml" value="0.371875" />
@@ -42,6 +43,7 @@
         <entry key="app/src/main/res/drawable/ic_icon_my_ticket_inactive.xml" value="0.371875" />
         <entry key="app/src/main/res/drawable/ic_icon_profile_active.xml" value="0.371875" />
         <entry key="app/src/main/res/drawable/ic_icon_profile_inactive.xml" value="0.371875" />
+        <entry key="app/src/main/res/drawable/ic_logout.xml" value="0.371875" />
         <entry key="app/src/main/res/drawable/ic_notification.xml" value="0.371875" />
         <entry key="app/src/main/res/drawable/ic_search.xml" value="0.371875" />
         <entry key="app/src/main/res/drawable/ic_search_black_24dp.xml" value="0.371875" />
@@ -63,6 +65,7 @@
         <entry key="app/src/main/res/layout/activity_popular_museum.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_recommended_museum.xml" value="0.18" />
         <entry key="app/src/main/res/layout/activity_reset_password.xml" value="0.35572916666666665" />
+        <entry key="app/src/main/res/layout/activity_setting.xml" value="0.35572916666666665" />
         <entry key="app/src/main/res/layout/activity_sign_in.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_sign_in_with_crypto.xml" value="0.2657407407407407" />
         <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.184375" />

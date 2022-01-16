@@ -37,6 +37,12 @@ class ProfileFragment : Fragment() {
             context.startActivity(intent)
         }
 
+        binding.settings.setOnClickListener {
+            val context = binding.root.context
+            val intent = Intent(binding.root.context, SettingActivity::class.java)
+            context.startActivity(intent)
+        }
+
         binding.termsAndConditions.setOnClickListener {
             val context = binding.root.context
             val intent = Intent(binding.root.context, TermsAndConditionsActivity::class.java)
