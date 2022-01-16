@@ -1,10 +1,12 @@
 package com.ningning.muses
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.ningning.muses.data.MUSEUMS
 import com.ningning.muses.databinding.FragmentProfileBinding
 
 class ProfileFragment : Fragment() {
@@ -19,5 +21,20 @@ class ProfileFragment : Fragment() {
     ): View {
         _binding = FragmentProfileBinding.inflate(inflater, container, false)
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        setupListener()
+
+    }
+
+    private fun setupListener() {
+        binding.termsAndConditions.setOnClickListener {
+            val context = binding.root.context
+            val intent = Intent(binding.root.context, TermsAndConditionsActivity::class.java)
+            context.startActivity(intent)
+        }
     }
 }

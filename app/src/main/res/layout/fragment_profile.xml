@@ -232,6 +232,7 @@
             android:background="@color/charade_light" />
 
         <TextView
+            android:id="@+id/termsAndConditions"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:drawableStart="@drawable/ic_terms_and_conditions"
