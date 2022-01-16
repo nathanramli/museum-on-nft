@@ -9,7 +9,7 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.bottomsheet.BottomSheetDialog
-import com.ningning.muses.MuseumObjectActivity
+import com.ningning.muses.ObjectListActivity
 import com.ningning.muses.R
 import com.ningning.muses.TicketDetailActivity
 import com.ningning.muses.data.Ticket
@@ -66,10 +66,7 @@ class MyTicketAdapter : RecyclerView.Adapter<MyTicketAdapter.ViewHolder>() {
                         )
                     )
                     ticketUseButton.setTextColor(
-                        ContextCompat.getColor(
-                            root.context,
-                            R.color.white
-                        )
+                        R.attr.colorOnPrimary
                     )
 
                     binding.ticketUseButton.setOnClickListener {
@@ -82,7 +79,7 @@ class MyTicketAdapter : RecyclerView.Adapter<MyTicketAdapter.ViewHolder>() {
                         view.findViewById<Button>(R.id.yesButton)?.setOnClickListener {
                             val context = binding.root.context
                             bottomSheet.dismiss()
-                            context.startActivity(Intent(context, MuseumObjectActivity::class.java))
+                            context.startActivity(Intent(context, ObjectListActivity::class.java))
                         }
                         bottomSheet.setContentView(view)
                         bottomSheet.show()

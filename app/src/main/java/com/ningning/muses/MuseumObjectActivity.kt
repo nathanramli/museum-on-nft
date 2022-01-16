@@ -32,6 +32,8 @@ class MuseumObjectActivity : AppCompatActivity() {
             finish()
         }
 
+        currentObject = intent.getIntExtra("index", 0)
+
         webView = findViewById(R.id.webView)
         updateObject()
 

@@ -43,19 +43,21 @@ class TicketDetailActivity : AppCompatActivity() {
             useTicketButton.setTextColor(ContextCompat.getColor(baseContext, R.color.white))
             useTicketButton.setBackgroundColor(ContextCompat.getColor(baseContext, R.color.silver))
         }
-        useTicketButton.setOnClickListener {
-            val bottomSheet = BottomSheetDialog(this)
-            val view = layoutInflater.inflate(R.layout.fragment_bottom_sheet_dialog, null)
-            bottomSheet.setContentView(view)
-            view.findViewById<Button>(R.id.noButton)?.setOnClickListener {
-                bottomSheet.dismiss()
+        if (data!!.isValid) {
+            useTicketButton.setOnClickListener {
+                val bottomSheet = BottomSheetDialog(this)
+                val view = layoutInflater.inflate(R.layout.fragment_bottom_sheet_dialog, null)
+                bottomSheet.setContentView(view)
+                view.findViewById<Button>(R.id.noButton)?.setOnClickListener {
+                    bottomSheet.dismiss()
+                }
+                view.findViewById<Button>(R.id.yesButton)?.setOnClickListener {
+                    val context = view.context
+                    bottomSheet.dismiss()
+                    context.startActivity(Intent(context, ObjectListActivity::class.java))
+                }
+                bottomSheet.show()
             }
-            view.findViewById<Button>(R.id.yesButton)?.setOnClickListener {
-                val context = view.context
-                bottomSheet.dismiss()
-                context.startActivity(Intent(context, MuseumObjectActivity::class.java))
-            }
-            bottomSheet.show()
         }
     }
 }
