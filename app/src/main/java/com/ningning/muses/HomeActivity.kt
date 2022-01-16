@@ -3,11 +3,14 @@ package com.ningning.muses
 import android.app.Dialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
 import android.view.MenuItem
 import android.widget.Button
 import com.google.android.material.navigation.NavigationBarView
 import com.ningning.muses.databinding.ActivityHomeBinding
 import androidx.fragment.app.Fragment
+import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.ningning.muses.data.Museum
 
 class HomeActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListener {
     private lateinit var binding: ActivityHomeBinding
@@ -21,13 +24,22 @@ class HomeActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListen
 
         supportActionBar?.hide()
 
-        val homeFragment = HomeFragment()
+        val data = intent.getStringExtra("fragment")
         val fragmentManager = supportFragmentManager
+        val homeFragment = HomeFragment()
         fragmentManager.beginTransaction().apply {
             add(R.id.frameContainer, homeFragment, HomeFragment::class.java.simpleName)
             commit()
         }
 
+        val bottomNavigation = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
+        if (data == "profile") {
+            bottomNavigation.selectedItemId = R.id.profileFragment
+            onNavigationItemSelected(bottomNavigation.menu.findItem(R.id.profileFragment))
+        } else if (data == "ticket") {
+            bottomNavigation.selectedItemId = R.id.myTicketFragment
+            onNavigationItemSelected(bottomNavigation.menu.findItem(R.id.myTicketFragment))
+        }
         binding.bottomNavigationView.setOnItemSelectedListener(this)
 
         setupButtonListener()

@@ -16,12 +16,14 @@ class PaymentSuccessActivity : AppCompatActivity() {
         toMyTicketButton.setOnClickListener {
             finishAffinity()
             val intent = Intent(applicationContext, HomeActivity::class.java)
+            intent.putExtra("fragment", "ticket")
             startActivity(intent)
         }
 
         toHomeButton.setOnClickListener {
             finishAffinity()
             val intent = Intent(applicationContext, HomeActivity::class.java)
+            intent.putExtra("fragment", "home")
             startActivity(intent)
         }
     }
