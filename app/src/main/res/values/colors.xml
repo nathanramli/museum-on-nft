@@ -14,4 +14,6 @@
     <color name="tuna">#333340</color>
     <color name="lightning_yellow">#FBC413</color>
     <color name="silver">#B8B8B8</color>
+    <color name="green">#50C976</color>
+    <color name="grey">#595959</color>
 </resources>

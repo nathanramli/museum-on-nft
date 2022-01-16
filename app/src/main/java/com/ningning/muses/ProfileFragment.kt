@@ -31,6 +31,12 @@ class ProfileFragment : Fragment() {
     }
 
     private fun setupListener() {
+        binding.wallet.setOnClickListener {
+            val context = binding.root.context
+            val intent = Intent(binding.root.context, WalletActivity::class.java)
+            context.startActivity(intent)
+        }
+
         binding.termsAndConditions.setOnClickListener {
             val context = binding.root.context
             val intent = Intent(binding.root.context, TermsAndConditionsActivity::class.java)

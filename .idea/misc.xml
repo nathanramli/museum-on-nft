@@ -29,6 +29,9 @@
         <entry key="app/src/main/res/drawable/bubble_chat_without_tail.xml" value="0.14114583333333333" />
         <entry key="app/src/main/res/drawable/chat_bubble_without_tail.xml" value="0.14114583333333333" />
         <entry key="app/src/main/res/drawable/connected_with_ethereum.xml" value="0.371875" />
+        <entry key="app/src/main/res/drawable/ic_checklist_2_.xml" value="0.371875" />
+        <entry key="app/src/main/res/drawable/ic_checklist_active.xml" value="0.371875" />
+        <entry key="app/src/main/res/drawable/ic_checklist_inactive.xml" value="0.371875" />
         <entry key="app/src/main/res/drawable/ic_crypto_wallet.xml" value="0.2851851851851852" />
         <entry key="app/src/main/res/drawable/ic_e_wallet.xml" value="0.9625" />
         <entry key="app/src/main/res/drawable/ic_edit_profile.xml" value="0.371875" />
@@ -40,6 +43,7 @@
         <entry key="app/src/main/res/drawable/ic_icon_profile_active.xml" value="0.371875" />
         <entry key="app/src/main/res/drawable/ic_icon_profile_inactive.xml" value="0.371875" />
         <entry key="app/src/main/res/drawable/ic_notification.xml" value="0.371875" />
+        <entry key="app/src/main/res/drawable/ic_search.xml" value="0.371875" />
         <entry key="app/src/main/res/drawable/ic_search_black_24dp.xml" value="0.371875" />
         <entry key="app/src/main/res/drawable/ic_setting.xml" value="0.371875" />
         <entry key="app/src/main/res/drawable/ic_terms_and_conditions.xml" value="0.371875" />
@@ -64,6 +68,7 @@
         <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.184375" />
         <entry key="app/src/main/res/layout/activity_terms_and_conditions.xml" value="0.30648148148148147" />
         <entry key="app/src/main/res/layout/activity_ticket_detail.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_wallet.xml" value="0.35572916666666665" />
         <entry key="app/src/main/res/layout/content_main.xml" value="0.125" />
         <entry key="app/src/main/res/layout/fragment_bottom_sheet_confirm_payment_dialog.xml" value="0.30648148148148147" />
         <entry key="app/src/main/res/layout/fragment_bottom_sheet_dialog.xml" value="0.27685185185185185" />
