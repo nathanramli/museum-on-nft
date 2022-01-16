@@ -45,32 +45,42 @@
             android:id="@+id/paymentMethodOption"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/paymentMethodText"
-            android:orientation="vertical">
+            android:layout_marginTop="50dp"
+            android:background="@drawable/rounded_charde_light_background"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/eWallet"
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/charade_light"
-                android:drawableLeft="@drawable/ic_e_wallet"
-                android:fontFamily="@font/questrial"
-                android:shadowRadius="100"
+                android:drawableStart="@drawable/ic_e_wallet"
+                android:drawablePadding="10dp"
+                android:padding="10dp"
                 android:text="E-Wallet $ 10.000"
+                android:textAlignment="center"
                 android:textColor="@color/white"
-                app:strokeColor="@color/black" />
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/cryptoWallet"
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey" />
+
+            <TextView
+                android:id="@+id/cryptoWalletPaymentOption"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/charade_light"
-                android:drawableLeft="@drawable/ic_crypto_wallet"
-                android:fontFamily="@font/questrial"
-                android:shadowRadius="100"
-                android:text="Crypto Wallet $ 100"
+                android:drawableStart="@drawable/ic_crypto_wallet"
+                android:drawablePadding="10dp"
+                android:padding="10dp"
+                android:text="Crypto Wallet $ 1.000"
+                android:textAlignment="center"
                 android:textColor="@color/white"
-                app:strokeColor="@color/black" />
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
 
         </LinearLayout>
 
