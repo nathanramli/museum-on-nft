@@ -31,6 +31,7 @@
         <entry key="app/src/main/res/drawable/connected_with_ethereum.xml" value="0.371875" />
         <entry key="app/src/main/res/drawable/ic_crypto_wallet.xml" value="0.2851851851851852" />
         <entry key="app/src/main/res/drawable/ic_e_wallet.xml" value="0.9625" />
+        <entry key="app/src/main/res/drawable/ic_edit_profile.xml" value="0.371875" />
         <entry key="app/src/main/res/drawable/ic_icon_home_active.xml" value="0.371875" />
         <entry key="app/src/main/res/drawable/ic_icon_home_inactive.xml" value="0.371875" />
         <entry key="app/src/main/res/drawable/ic_icon_my_profile_inactive.xml" value="0.371875" />
@@ -40,9 +41,14 @@
         <entry key="app/src/main/res/drawable/ic_icon_profile_inactive.xml" value="0.371875" />
         <entry key="app/src/main/res/drawable/ic_notification.xml" value="0.371875" />
         <entry key="app/src/main/res/drawable/ic_search_black_24dp.xml" value="0.371875" />
+        <entry key="app/src/main/res/drawable/ic_setting.xml" value="0.371875" />
+        <entry key="app/src/main/res/drawable/ic_terms_and_conditions.xml" value="0.371875" />
+        <entry key="app/src/main/res/drawable/ic_wallet.xml" value="0.371875" />
         <entry key="app/src/main/res/drawable/my_ticket_background_bottom.xml" value="0.203125" />
         <entry key="app/src/main/res/drawable/my_ticket_background_top.xml" value="0.203125" />
         <entry key="app/src/main/res/drawable/notification_button.xml" value="0.371875" />
+        <entry key="app/src/main/res/drawable/rounded_charde_light_background.xml" value="0.371875" />
+        <entry key="app/src/main/res/drawable/top_rounded_white_background.xml" value="0.371875" />
         <entry key="app/src/main/res/drawable/virtual_reality.xml" value="0.14114583333333333" />
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.35572916666666665" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
@@ -61,8 +67,9 @@
         <entry key="app/src/main/res/layout/fragment_bottom_sheet_confirm_payment_dialog.xml" value="0.30648148148148147" />
         <entry key="app/src/main/res/layout/fragment_bottom_sheet_dialog.xml" value="0.27685185185185185" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.22" />
-        <entry key="app/src/main/res/layout/fragment_my_ticket.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_my_ticket.xml" value="0.18" />
         <entry key="app/src/main/res/layout/fragment_notification.xml" value="0.35572916666666665" />
+        <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.35572916666666665" />
         <entry key="app/src/main/res/layout/museum_item_layout.xml" value="0.5" />
         <entry key="app/src/main/res/layout/museum_see_all_child_recycler_view.xml" value="0.5" />
         <entry key="app/src/main/res/layout/museum_see_all_parent_recycler_view.xml" value="0.25" />
