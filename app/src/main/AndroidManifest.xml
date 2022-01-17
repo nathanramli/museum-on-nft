@@ -13,6 +13,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Muses">
         <activity
+            android:name=".ObjectListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LandscapeObjectActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
             android:name=".MuseumObjectActivity"
             android:exported="false" />
         <activity

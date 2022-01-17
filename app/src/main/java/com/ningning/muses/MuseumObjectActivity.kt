@@ -1,10 +1,9 @@
 package com.ningning.muses
 
 import android.annotation.SuppressLint
-import android.content.pm.ActivityInfo
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.ViewGroup
 import android.webkit.WebView
 import android.widget.Button
 import android.widget.ImageButton
@@ -12,7 +11,6 @@ import android.widget.TextView
 import androidx.appcompat.widget.Toolbar
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.button.MaterialButton
-import com.google.android.material.card.MaterialCardView
 import com.ningning.muses.data.MUSEUM_OBJECTS
 
 class MuseumObjectActivity : AppCompatActivity() {
@@ -33,6 +31,8 @@ class MuseumObjectActivity : AppCompatActivity() {
         toolbar?.setNavigationOnClickListener {
             finish()
         }
+
+        currentObject = intent.getIntExtra("index", 0)
 
         webView = findViewById(R.id.webView)
         updateObject()
@@ -55,10 +55,10 @@ class MuseumObjectActivity : AppCompatActivity() {
     }
 
     private fun fullscreenClickEvent() {
-        requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
-        val museumObjectContainer = findViewById<MaterialCardView>(R.id.museumObjectContainer)
-        museumObjectContainer.layoutParams.width = ViewGroup.LayoutParams.MATCH_PARENT
-        museumObjectContainer.requestLayout()
+        val context = this
+        val intent = Intent(this, LandscapeObjectActivity::class.java)
+        intent.putExtra("index", currentObject)
+        context.startActivity(intent)
     }
 
     private fun updateObject() {

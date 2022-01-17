@@ -59,11 +59,6 @@ class MyTicketFragment : Fragment() {
         binding.recyclerViewTicket.addOnScrollListener(object : RecyclerView.OnScrollListener() {
             override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
                 super.onScrolled(recyclerView, dx, dy)
-                if (dy > 0) {
-                    // make the appbar stay stick at top
-                } else {
-                    // make the appbar stay stick at top
-                }
             }
         })
     }
