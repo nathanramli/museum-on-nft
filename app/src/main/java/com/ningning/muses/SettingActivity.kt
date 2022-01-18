@@ -29,7 +29,15 @@ class SettingActivity : AppCompatActivity() {
     }
 
     private fun setupListener() {
+        val changePassword = findViewById<TextView>(R.id.changePassword)
         val logout = findViewById<TextView>(R.id.logout)
+
+        changePassword.setOnClickListener {
+            val context = this
+            val intent = Intent(this, ChangePasswordActivity::class.java)
+            context.startActivity(intent)
+        }
+
         logout.setOnClickListener {
             val bottomSheet = BottomSheetDialog(this)
             val view = layoutInflater.inflate(R.layout.fragment_bottom_sheet_logout, null)
