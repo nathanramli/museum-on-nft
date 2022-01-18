@@ -39,6 +39,9 @@
             android:name=".SignInActivity"
             android:exported="false" />
         <activity
+            android:name=".SelectFavoriteCategoryActivity"
+            android:exported="false" />
+        <activity
             android:name=".HomeActivity"
             android:exported="false" />
         <activity

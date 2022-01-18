@@ -64,6 +64,9 @@
     <string name="my_ticket">My Ticket</string>
     <string name="profile">Profile</string>
 
+    <!-- Select Favorite Category -->
+    <string name="select_your_favorite">Select your favorite museum categories:</string>
+
     <string name="object_viewer_helper_title">Orbit Around</string>
     <string name="object_viewer_helper_desc">Use one finger to drag for orbit around</string>
 </resources>

@@ -49,11 +49,11 @@ class SignUpActivity : AppCompatActivity() {
         return super.dispatchTouchEvent(ev)
     }
 
-    private fun navigateToHome() {
-        startActivity(Intent(applicationContext, HomeActivity::class.java))
+    private fun navigateToSelectFavoriteCategory() {
+        startActivity(Intent(applicationContext, SelectFavoriteCategoryActivity::class.java))
         finish()
     }
-    
+
     private fun navigateToSignIn() {
         startActivity(Intent(applicationContext, SignInActivity::class.java))
         finish()
@@ -67,7 +67,7 @@ class SignUpActivity : AppCompatActivity() {
 
         val signUpButton = findViewById<Button>(R.id.signUpButton)
         signUpButton.setOnClickListener(View.OnClickListener {
-            navigateToHome()
+            navigateToSelectFavoriteCategory()
         })
     }
 }
