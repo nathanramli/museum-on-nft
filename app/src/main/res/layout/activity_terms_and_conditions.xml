@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/charade"
+    tools:context=".TermsAndConditionsActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:elevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@android:color/transparent"
+            app:navigationIconTint="?attr/colorPrimary"
+            app:title="Terms &amp; Conditions"
+            app:titleCentered="true"
+            app:titleTextColor="@color/white">
+
+        </com.google.android.material.appbar.MaterialToolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="T&amp;C 1"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phasellus ut dui maximus, aliquet quam non, dapibus mauris. Cras nibh nibh, feugiat nec efficitur eget, placerat ac libero. Nunc leo tortor, interdum imperdiet diam a, condimentum rhoncus ipsum. Sed semper sagittis leo ac eleifend. Morbi at rhoncus dui, vitae scelerisque dui. Donec mattis id quam ac euismod. Integer ut felis ac ligula ullamcorper tincidunt. Suspendisse est tortor, accumsan at risus eget, interdum consequat nisl. Donec sit amet vulputate turpis. Integer dui mi, sagittis a risus vel, pulvinar gravida risus. Fusce ante tortor, sodales et quam non, tincidunt porta nisi. "
+            android:textAlignment="textStart"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="T&amp;C 2"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phasellus ut dui maxim rhoncus dui, vitae scelerisque dui. Donec mattis id quam ac euismod. Integer ut felis ac ligula ullamcorper tincidunt. Suspendisse est tortor, accumsan at risus eget, interdum consequat nisl. Donec sit amet vulputate turpis. Integer dui mi, sagittis a risus vel, pulvinar gravida risus. Fusce ante tortor, sodales et quam non, tincidunt porta nisi. "
+            android:textAlignment="textStart"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="MUSES"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="v1.0"
+            android:textAlignment="center" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
