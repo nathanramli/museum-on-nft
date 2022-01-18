@@ -67,6 +67,10 @@
     <!-- Select Favorite Category -->
     <string name="select_your_favorite">Select your favorite museum categories:</string>
 
+    <!-- Reset Password -->
+    <string name="reset_password_email_has_been_sent">Email has been sent!</string>
+    <string name="reset_password_check_your_email">Please check your email, to reset your password.</string>
+
     <string name="object_viewer_helper_title">Orbit Around</string>
     <string name="object_viewer_helper_desc">Use one finger to drag for orbit around</string>
 </resources>

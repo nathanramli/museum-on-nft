@@ -9,6 +9,7 @@ import android.view.MotionEvent
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import androidx.appcompat.widget.Toolbar
+import androidx.fragment.app.Fragment
 
 class ResetPasswordActivity : AppCompatActivity() {
     private lateinit var toolbar: Toolbar
@@ -25,6 +26,9 @@ class ResetPasswordActivity : AppCompatActivity() {
             navigateToSignIn()
             finish()
         }
+
+        val resetPasswordFragment = ResetPasswordFragment()
+        replaceFragment(resetPasswordFragment, ResetPasswordFragment::class.java.simpleName)
     }
 
     override fun dispatchTouchEvent(ev: MotionEvent?): Boolean {
@@ -44,8 +48,23 @@ class ResetPasswordActivity : AppCompatActivity() {
         return super.dispatchTouchEvent(ev)
     }
 
+    fun showResetPasswordRequested() {
+        val resetPasswordRequestedFragment = ResetPasswordRequestedFragment()
+        replaceFragment(
+            resetPasswordRequestedFragment,
+            ResetPasswordRequestedFragment::class.java.simpleName
+        )
+    }
+
     private fun navigateToSignIn() {
         startActivity(Intent(applicationContext, SignInActivity::class.java))
         finish()
+    }
+
+    private fun replaceFragment(fragment: Fragment, simpleName: String) {
+        supportFragmentManager.beginTransaction().apply {
+            replace(R.id.frameContainer, fragment, simpleName)
+            commit()
+        }
     }
 }
