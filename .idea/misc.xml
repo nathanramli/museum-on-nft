@@ -68,6 +68,7 @@
         <entry key="app/src/main/res/layout/activity_popular_museum.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_recommended_museum.xml" value="0.18" />
         <entry key="app/src/main/res/layout/activity_reset_password.xml" value="0.35572916666666665" />
+        <entry key="app/src/main/res/layout/activity_search.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_setting.xml" value="0.35572916666666665" />
         <entry key="app/src/main/res/layout/activity_sign_in.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_sign_in_with_crypto.xml" value="0.2657407407407407" />
