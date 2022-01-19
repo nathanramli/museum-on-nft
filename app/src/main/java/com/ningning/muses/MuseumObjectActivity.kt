@@ -85,12 +85,14 @@ class MuseumObjectActivity : AppCompatActivity() {
 
     private fun helpClickEvent() {
         val bottomSheet = BottomSheetDialog(this)
-        val view = layoutInflater.inflate(R.layout.fragment_bottom_sheet_alert, null)
+        val view = layoutInflater.inflate(R.layout.fragment_bottom_sheet_nft, null)
         bottomSheet.setContentView(view)
-        view.findViewById<TextView>(R.id.bottomSheetTitle).text =
-            getString(R.string.object_viewer_helper_title)
-        view.findViewById<TextView>(R.id.bottomSheetDesc).text =
-            getString(R.string.object_viewer_helper_desc)
+        view.findViewById<TextView>(R.id.addressText).text = MUSEUM_OBJECTS[currentObject].address
+        view.findViewById<TextView>(R.id.ownerText).text = MUSEUM_OBJECTS[currentObject].owner
+        view.findViewById<TextView>(R.id.standardText).text =
+            MUSEUM_OBJECTS[currentObject].tokenStandard
+        view.findViewById<TextView>(R.id.blockchainText).text =
+            MUSEUM_OBJECTS[currentObject].blockchain
         view.findViewById<Button>(R.id.okButton)?.setOnClickListener {
             bottomSheet.dismiss()
         }

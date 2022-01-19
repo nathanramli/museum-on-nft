@@ -6,6 +6,10 @@ data class MuseumObject(
     val likeCount: Int,
     val thumbnail: String,
     val model: String,
+    val address: String,
+    val owner: String,
+    val tokenStandard: String,
+    val blockchain: String,
 )
 
 val MUSEUM_OBJECTS = listOf(
@@ -14,7 +18,11 @@ val MUSEUM_OBJECTS = listOf(
         "Mid 18th Century View of Venice Painting Antonietta Brandeis Board Oil Paint ... 18th Century French Oil on Canvas Pheasant Painting in Gilt Frame Signed ...",
         120,
         "https://dl.dropboxusercontent.com/s/qsl2m002jrbln63/18th-century-oil-can-thumbnail.png",
-        "https://dl.dropboxusercontent.com/s/kt017q95v3s0a6j/OilCan.glb"
+        "https://dl.dropboxusercontent.com/s/kt017q95v3s0a6j/OilCan.glb",
+        "0x2a187453064356c898cae034eaed119e1663acb8",
+        "0xe74ab71711981a31d3c38edfe702989f30be29b6",
+        "ERC-721",
+        "Ethereum"
     ),
     MuseumObject(
         "Gaius Julius Caesar",
@@ -24,7 +32,11 @@ val MUSEUM_OBJECTS = listOf(
                 "\n",
         4001,
         "https://dl.dropboxusercontent.com/s/kh06nuo61r6nvuw/cesar_louvre_museum.png",
-        "https://dl.dropboxusercontent.com/s/kh5zum3uxqkp4o1/cesar_louvre_museum.glb"
+        "https://dl.dropboxusercontent.com/s/kh5zum3uxqkp4o1/cesar_louvre_museum.glb",
+        "0x3b3ee1931dc30c1957379fac9aba94d1c48a5405",
+        "0xcda72070e455bb31c7690a170224ce43623d0b6f",
+        "ERC-721",
+        "Ethereum"
     ),
     MuseumObject(
         "Amenemhat III",
@@ -34,6 +46,10 @@ val MUSEUM_OBJECTS = listOf(
                 "\n",
         2351,
         "https://dl.dropboxusercontent.com/s/g4jfyhqdfwr7wko/granite_head_of_amenemhat_iii.png",
-        "https://dl.dropboxusercontent.com/s/sh332w3qfthyzaf/granite_head_of_amenemhat_iii.glb"
+        "https://dl.dropboxusercontent.com/s/sh332w3qfthyzaf/granite_head_of_amenemhat_iii.glb",
+        "0x495f947276749ce646f68ac8c248420045cb7b5e",
+        "0xa4b61e227361a9cd9e62ca10946c27748a382cab",
+        "ERC-1155",
+        "Ethereum"
     ),
 )
