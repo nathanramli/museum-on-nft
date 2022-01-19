@@ -2,16 +2,17 @@ package com.ningning.muses
 
 import android.content.Context
 import android.content.Intent
+import android.graphics.Color
 import android.graphics.Rect
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MotionEvent
-import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.widget.Toolbar
+import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.textfield.TextInputEditText
 
 class SignInWithCryptoActivity : AppCompatActivity() {
@@ -79,19 +80,30 @@ class SignInWithCryptoActivity : AppCompatActivity() {
 
     private fun setupButtonListener() {
         val signInButton = findViewById<Button>(R.id.signInButton)
-        signInButton.setOnClickListener(View.OnClickListener {
-            navigateToHome()
-        })
+        signInButton.setOnClickListener {
+            val phrase = findViewById<EditText>(R.id.inputPhrase)
+            if (phrase.text.isEmpty()) {
+                Snackbar.make(
+                    findViewById(android.R.id.content),
+                    "Please fill your phrase first!",
+                    Snackbar.LENGTH_SHORT
+                ).setBackgroundTint(Color.RED)
+                    .setTextColor(Color.WHITE)
+                    .show()
+            } else {
+                navigateToHome()
+            }
+        }
 
         val signUpButton = findViewById<TextView>(R.id.registerNow)
-        signUpButton.setOnClickListener(View.OnClickListener {
+        signUpButton.setOnClickListener {
             navigateToSignUp()
-        })
+        }
 
         val signInWithEmail = findViewById<Button>(R.id.signInWithEmailButton)
-        signInWithEmail.setOnClickListener(View.OnClickListener {
+        signInWithEmail.setOnClickListener {
             navigateToSignIn()
-        })
+        }
 
         val forgotPassword = findViewById<TextView>(R.id.forgotPassword)
         forgotPassword.setOnClickListener {

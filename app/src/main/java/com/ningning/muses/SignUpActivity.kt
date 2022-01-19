@@ -2,16 +2,17 @@ package com.ningning.muses
 
 import android.content.Context
 import android.content.Intent
+import android.graphics.Color
 import android.graphics.Rect
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MotionEvent
-import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.widget.Toolbar
+import com.google.android.material.snackbar.Snackbar
 
 class SignUpActivity : AppCompatActivity() {
     private lateinit var toolbar: Toolbar
@@ -61,13 +62,26 @@ class SignUpActivity : AppCompatActivity() {
 
     private fun setupButtonListener() {
         val signInButton = findViewById<TextView>(R.id.signInNow)
-        signInButton.setOnClickListener(View.OnClickListener {
+        signInButton.setOnClickListener {
             navigateToSignIn()
-        })
+        }
 
         val signUpButton = findViewById<Button>(R.id.signUpButton)
-        signUpButton.setOnClickListener(View.OnClickListener {
-            navigateToSelectFavoriteCategory()
-        })
+        signUpButton.setOnClickListener {
+            val name = findViewById<EditText>(R.id.inputName)
+            val email = findViewById<EditText>(R.id.inputEmail)
+            val password = findViewById<EditText>(R.id.inputPassword)
+            if (name.text.isEmpty() || email.text.isEmpty() || password.text.isEmpty()) {
+                Snackbar.make(
+                    findViewById(android.R.id.content),
+                    "Please fill your full name, email and password!",
+                    Snackbar.LENGTH_SHORT
+                ).setBackgroundTint(Color.RED)
+                    .setTextColor(Color.WHITE)
+                    .show()
+            } else {
+                navigateToSelectFavoriteCategory()
+            }
+        }
     }
 }
