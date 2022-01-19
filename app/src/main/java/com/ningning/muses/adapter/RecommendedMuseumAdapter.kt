@@ -17,7 +17,8 @@ class RecommendedMuseumAdapter : RecyclerView.Adapter<RecommendedMuseumAdapter.V
         parent: ViewGroup,
         viewType: Int
     ): ViewHolder {
-        val binding = MuseumItemLayoutBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val binding =
+            MuseumItemLayoutBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return ViewHolder(binding)
     }
 
@@ -29,7 +30,6 @@ class RecommendedMuseumAdapter : RecyclerView.Adapter<RecommendedMuseumAdapter.V
         RecyclerView.ViewHolder(binding.root) {
         fun bind(museum: Museum, position: Int) {
             with(binding) {
-                binding.root.layoutParams.width = 450
                 binding.root.layoutParams.height = 300
                 museumCardName.text = museum.name
                 museumCardName.textSize = 10F
