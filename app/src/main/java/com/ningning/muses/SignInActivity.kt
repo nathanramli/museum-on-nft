@@ -2,16 +2,17 @@ package com.ningning.muses
 
 import android.content.Context
 import android.content.Intent
+import android.graphics.Color
 import android.graphics.Rect
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MotionEvent
-import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.widget.Toolbar
+import com.google.android.material.snackbar.Snackbar
 
 class SignInActivity : AppCompatActivity() {
     private lateinit var toolbar: Toolbar
@@ -76,24 +77,36 @@ class SignInActivity : AppCompatActivity() {
 
     private fun setupButtonListener() {
         val signInButton = findViewById<Button>(R.id.signInButton)
-        signInButton.setOnClickListener(View.OnClickListener {
-            navigateToHome()
-        })
+        signInButton.setOnClickListener {
+            val email = findViewById<EditText>(R.id.inputEmail)
+            val password = findViewById<EditText>(R.id.inputPassword)
+            if (email.text.isEmpty() || password.text.isEmpty()) {
+                Snackbar.make(
+                    findViewById(android.R.id.content),
+                    "Please fill your email and password!",
+                    Snackbar.LENGTH_SHORT
+                ).setBackgroundTint(Color.RED)
+                    .setTextColor(Color.WHITE)
+                    .show()
+            } else {
+                navigateToHome()
+            }
+        }
 
         val signInWithCrypto = findViewById<Button>(R.id.signInCryptoButton)
-        signInWithCrypto.setOnClickListener(View.OnClickListener {
+        signInWithCrypto.setOnClickListener {
             navigateToSignInWithCrypto()
-        })
+        }
 
         val signUpButton = findViewById<TextView>(R.id.registerNow)
-        signUpButton.setOnClickListener(View.OnClickListener {
+        signUpButton.setOnClickListener {
             navigateToSignUp()
-        })
+        }
 
         val forgotPassword = findViewById<TextView>(R.id.forgotPassword)
-        forgotPassword.setOnClickListener(View.OnClickListener {
+        forgotPassword.setOnClickListener {
             navigateToResetPassword()
-        })
+        }
 
     }
 }

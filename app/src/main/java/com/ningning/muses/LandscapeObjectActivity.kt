@@ -1,11 +1,13 @@
 package com.ningning.muses
 
 import android.content.pm.ActivityInfo
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.webkit.WebView
 import android.widget.ImageButton
 import androidx.appcompat.widget.Toolbar
+import com.google.android.material.snackbar.Snackbar
 import com.ningning.muses.data.MUSEUM_OBJECTS
 
 class LandscapeObjectActivity : AppCompatActivity() {
@@ -34,6 +36,17 @@ class LandscapeObjectActivity : AppCompatActivity() {
         updateObject()
 
         findViewById<ImageButton>(R.id.exitLandscape).setOnClickListener { navigate2ObjectDetail() }
+
+        val sb = Snackbar.make(
+            findViewById(android.R.id.content),
+            "Swipe to see from all directions",
+            Snackbar.LENGTH_LONG
+        )
+        sb.setAction("Ok", { sb.dismiss() })
+            .setActionTextColor(Color.BLACK)
+            .setTextColor(Color.BLACK)
+            .setDuration(1000 * 10)
+            .show()
     }
 
     private fun navigate2ObjectDetail() {
