@@ -72,6 +72,11 @@ class SignInWithCryptoActivity : AppCompatActivity() {
         finish()
     }
 
+    private fun navigateToResetPassword() {
+        startActivity(Intent(applicationContext, ResetPasswordActivity::class.java))
+        finish()
+    }
+
     private fun setupButtonListener() {
         val signInButton = findViewById<Button>(R.id.signInButton)
         signInButton.setOnClickListener(View.OnClickListener {
@@ -87,5 +92,10 @@ class SignInWithCryptoActivity : AppCompatActivity() {
         signInWithEmail.setOnClickListener(View.OnClickListener {
             navigateToSignIn()
         })
+
+        val forgotPassword = findViewById<TextView>(R.id.forgotPassword)
+        forgotPassword.setOnClickListener {
+            navigateToResetPassword()
+        }
     }
 }
