@@ -138,6 +138,7 @@
                         android:layout_centerVertical="true"
                         android:background="@android:color/transparent"
                         android:hint="Email"
+                        android:text="ningning@gmail.com"
                         android:inputType="textEmailAddress"
                         android:textColor="@color/white"
                         app:backgroundTint="@color/white" />
@@ -214,14 +215,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="30dp"
                         android:background="?selectableItemBackgroundBorderless"
-                        android:backgroundTint="@color/charade"
                         android:src="@drawable/ic_calendar"
-                        android:tint="@color/black"
                         app:layout_constraintBottom_toBottomOf="@+id/tvDateEvent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/textView"
-                        app:tint="@color/black"
-                        tools:ignore="UseAppTint" />
+                        app:layout_constraintTop_toBottomOf="@+id/textView" />
                 </LinearLayout>
 
             </LinearLayout>

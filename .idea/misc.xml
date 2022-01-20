@@ -59,6 +59,7 @@
         <entry key="app/src/main/res/drawable/virtual_reality.xml" value="0.14114583333333333" />
         <entry key="app/src/main/res/layout/acitivity_edit_profile.xml" value="0.35572916666666665" />
         <entry key="app/src/main/res/layout/activity_change_password.xml" value="0.35572916666666665" />
+        <entry key="app/src/main/res/layout/activity_edit_profile.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.35572916666666665" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_museum_detail.xml" value="0.25" />
