@@ -20,8 +20,9 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="@android:color/transparent"
+            app:menu="@menu/top_bar_menu_museum_object"
             app:navigationIconTint="?attr/colorPrimary"
-            app:title="Museum Name"
+            app:title=" "
             app:titleCentered="true"
             app:titleTextColor="@color/white">
 
