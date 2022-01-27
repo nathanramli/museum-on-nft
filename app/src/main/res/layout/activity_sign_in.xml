@@ -38,18 +38,18 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/appBarLayout"
             android:layout_alignParentLeft="true"
-            android:layout_marginLeft="50dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginLeft="@dimen/_27sdp"
+            android:layout_marginTop="@dimen/_10sdp"
             android:background="@drawable/bubble_chat_container_without_tail"
             android:orientation="vertical"
-            android:padding="23dp">
+            android:padding="@dimen/_15sdp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Muses"
                 android:textColor="?attr/colorPrimary"
-                android:textSize="16dp" />
+                android:textSize="@dimen/_12sdp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -57,7 +57,7 @@
                 android:layout_marginTop="3dp"
                 android:text="Welcome guys!"
                 android:textColor="@color/white"
-                android:textSize="18dp" />
+                android:textSize="@dimen/_14sdp" />
         </LinearLayout>
 
         <LinearLayout
@@ -66,40 +66,42 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/bubble_chat_first"
             android:layout_alignParentLeft="true"
-            android:layout_marginLeft="50dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginLeft="@dimen/_27sdp"
+            android:layout_marginTop="@dimen/_10sdp"
             android:background="@drawable/bubble_chat_container_with_tail"
             android:orientation="vertical"
-            android:paddingLeft="23dp"
-            android:paddingTop="23dp"
-            android:paddingRight="23dp">
+            android:paddingLeft="@dimen/_15sdp"
+            android:paddingTop="@dimen/_15sdp"
+            android:paddingRight="@dimen/_15sdp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="How was your day?\nReady to explore?"
                 android:textColor="@color/white"
-                android:textSize="18dp" />
+                android:textSize="@dimen/_14sdp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginBottom="@dimen/_8sdp"
                 android:text="Just now"
                 android:textColor="@color/silver"
-                android:textSize="10dp" />
+                android:textSize="@dimen/_8sdp" />
         </LinearLayout>
 
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/emailFieldLayout"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/bubble_chat_second"
             android:layout_centerInParent="true"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="@dimen/_14sdp"
+            android:paddingLeft="@dimen/_27sdp"
+            android:paddingRight="@dimen/_27sdp"
             android:textColorHint="@color/silver"
             app:boxStrokeColor="?attr/colorPrimary"
             app:counterEnabled="true"
@@ -108,7 +110,7 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/inputEmail"
-                android:layout_width="300dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
@@ -120,18 +122,20 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/passwordFieldLayout"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/emailFieldLayout"
             android:layout_centerInParent="true"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:paddingLeft="@dimen/_27sdp"
+            android:paddingRight="@dimen/_27sdp"
             android:textColorHint="@color/silver"
             app:boxStrokeColor="?attr/colorPrimary"
             app:endIconMode="password_toggle">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/inputPassword"
-                android:layout_width="300dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
@@ -142,13 +146,13 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/signInButton"
-            android:layout_width="wrap_content"
-            android:layout_height="60dp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
             android:layout_above="@id/forgotPassword"
             android:layout_alignParentLeft="true"
             android:layout_alignParentRight="true"
-            android:layout_marginLeft="25dp"
-            android:layout_marginRight="25dp"
+            android:layout_marginLeft="@dimen/_27sdp"
+            android:layout_marginRight="@dimen/_27sdp"
             android:text="Sign In"
             android:textAllCaps="false"
             android:textColor="@color/black"
@@ -161,7 +165,7 @@
             android:layout_height="wrap_content"
             android:layout_above="@id/registerSection"
             android:layout_centerInParent="true"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="@dimen/_3sdp"
             android:clickable="true"
             android:focusable="true"
             android:text="Forgot password ?"
@@ -172,7 +176,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_above="@id/orLoginWith"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="@dimen/_3sdp"
             android:gravity="center">
 
             <TextView
@@ -187,7 +191,7 @@
                 android:id="@+id/registerNow"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
+                android:layout_marginLeft="@dimen/_3sdp"
                 android:clickable="true"
                 android:focusable="true"
                 android:text="Register Now!"
@@ -200,21 +204,21 @@
             android:layout_height="wrap_content"
             android:layout_above="@id/signInCryptoButton"
             android:layout_centerInParent="true"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="@dimen/_3sdp"
             android:text="Or login with"
             android:textColor="@color/white" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/signInCryptoButton"
-            android:layout_width="wrap_content"
-            android:layout_height="60dp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginLeft="25dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginRight="25dp"
-            android:layout_marginBottom="25dp"
+            android:layout_marginLeft="@dimen/_27sdp"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:layout_marginRight="@dimen/_27sdp"
+            android:layout_marginBottom="@dimen/_17sdp"
             android:text="Crypto Wallet"
             android:textAllCaps="false"
             android:textColor="?attr/colorPrimary"

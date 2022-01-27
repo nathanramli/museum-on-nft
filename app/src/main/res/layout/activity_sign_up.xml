@@ -38,26 +38,26 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/appBarLayout"
             android:layout_alignParentLeft="true"
-            android:layout_marginLeft="50dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginLeft="@dimen/_27sdp"
+            android:layout_marginTop="@dimen/_10sdp"
             android:background="@drawable/bubble_chat_container_without_tail"
             android:orientation="vertical"
-            android:padding="23dp">
+            android:padding="@dimen/_15sdp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Muses"
                 android:textColor="?attr/colorPrimary"
-                android:textSize="16dp" />
+                android:textSize="@dimen/_12sdp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="3dp"
+                android:layout_marginTop="@dimen/_3sdp"
                 android:text="Let’s join with us!"
                 android:textColor="@color/white"
-                android:textSize="18dp" />
+                android:textSize="@dimen/_14sdp" />
         </LinearLayout>
 
         <LinearLayout
@@ -66,39 +66,41 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/bubble_chat_first"
             android:layout_alignParentLeft="true"
-            android:layout_marginLeft="50dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginLeft="@dimen/_27sdp"
+            android:layout_marginTop="@dimen/_10sdp"
             android:background="@drawable/bubble_chat_container_with_tail"
             android:orientation="vertical"
-            android:paddingLeft="23dp"
-            android:paddingTop="23dp"
-            android:paddingRight="23dp">
+            android:paddingLeft="@dimen/_15sdp"
+            android:paddingTop="@dimen/_15sdp"
+            android:paddingRight="@dimen/_15sdp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Come on! What are \nyou waiting for?"
                 android:textColor="@color/white"
-                android:textSize="18dp" />
+                android:textSize="@dimen/_14sdp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginBottom="@dimen/_8sdp"
                 android:text="Just now"
                 android:textColor="@color/silver"
-                android:textSize="10dp" />
+                android:textSize="@dimen/_8sdp" />
         </LinearLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/nameFieldLayout"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/bubble_chat_second"
             android:layout_centerInParent="true"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="@dimen/_14sdp"
+            android:paddingLeft="@dimen/_27sdp"
+            android:paddingRight="@dimen/_27sdp"
             android:textColorHint="@color/silver"
             app:boxStrokeColor="?attr/colorPrimary"
             app:counterEnabled="true"
@@ -107,7 +109,7 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/inputName"
-                android:layout_width="300dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
@@ -119,11 +121,13 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/emailFieldLayout"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/nameFieldLayout"
             android:layout_centerInParent="true"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:paddingLeft="@dimen/_27sdp"
+            android:paddingRight="@dimen/_27sdp"
             android:textColorHint="@color/silver"
             app:boxStrokeColor="?attr/colorPrimary"
             app:counterEnabled="true"
@@ -132,7 +136,7 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/inputEmail"
-                android:layout_width="300dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
@@ -144,18 +148,20 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/passwordFieldLayout"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/emailFieldLayout"
             android:layout_centerInParent="true"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:paddingLeft="@dimen/_27sdp"
+            android:paddingRight="@dimen/_27sdp"
             android:textColorHint="@color/silver"
             app:boxStrokeColor="?attr/colorPrimary"
             app:endIconMode="password_toggle">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/inputPassword"
-                android:layout_width="300dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
